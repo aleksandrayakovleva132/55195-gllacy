@@ -10,17 +10,78 @@
         <a href="/" class="main-header-logo">
           <img src="img/logo-header.svg" width="154" height="64" alt="Логотип «Глейси»">    
         </a>
-        <ul class="site-navigation">
-          <li><a href="#">Каталог</a></li>
+        <ul class="main-menu">
+          <li><a href="#">Каталог</a>
+            <ul class="sub-menu">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
-        </ul>  
-        <ul class="user-navigation">
-          <li class="user-navigation-search"><a href="#"></a></li>
-          <li class="user-navigation-login"><a href="#">Вход</a></li>
-          <li class="user-navigation-cart"><a href="#"></a></li>
         </ul>
-      </nav>
+          
+        <ul class="user-navigation">
+          <li class="user-navigation-search">
+            <button class="button button-search"><span class="visually-hidden">Поиск</span></button>
+              <ul class="sub-menu">
+                <li>
+                  <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="поиск" placeholder="Поиск">
+                  </form>    
+                </li>
+               </ul>
+          </li>
+          <li class="user-navigation-login"><a href="#">Вход</a>
+            <ul class="sub-menu">
+              <li>
+                <form class="form-login" action="https://echo.htmlacademy.ru">
+                  <span class="visually-hidden">Электронная почта</span>
+                  <input type="email" name="email" placeholder="Электронная почта">
+                  <span class="visually-hidden">Пароль</span>
+                  <input type="password" name="password" placeholder=Пароль>
+                  <button class="button button-login" type="submit">Войти</button>    
+                </form>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>   
+              </li>
+            </ul>
+           </li>
+           <li><a href="#"><span class="visually-hidden">Корзина</span></a>
+             <ul class="sub-menu">
+                 <li><span class="visually-hidden">Таблица товаров</span>
+                 <table class="besket-item">
+                   <tr class="visually-hidden">
+                     <td>Удалить из корзины</td>
+                     <td>Изображение</td>
+                     <td>Название</td>
+                     <td>Цена/кг</td>
+                     <td>Стоимость</td>
+                   </tr>
+                   <tr>
+                     <td><button class="button-close" type="button">X</button></td>
+                     <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                     <td>Пломбир с апельсиновым джемом</td>
+                     <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
+                     <td>300 руб.</td>
+                   </tr>
+                   <tr>
+                      <td><button class="button-close" type="button">X</button></td>
+                     <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                     <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
+                     <td>450 руб.</td>
+                   </tr> 
+                 </table>
+                 <span><b>Итого:750 руб.</b></span>
+                 <button type="submit" class="button button-basket">Oформить заказ</button>       
+               </li>
+             </ul>
+           </li>
+        </ul>
+      </nav>    
       <div class="contacts-navigation">
         <span class="contacts-navigation-timing">С 10 до 20, ежедневно</span><br>
         <a href="tel:+78124502525" class="contacts-navigation-phone">8 812 450-25-25</a>    
@@ -28,9 +89,20 @@
     </header>
     <!-- Cлайдер -->
     <div class="slider">
-      <input type="radio" name="ice-1">
-      <input type="radio" name="ice-2">
-      <input type="radio" name="ice-3">    
+      <ul>
+        <li>
+          <span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span>
+          <input type="radio" name="ice-banner" value="ice-1" checked>
+          </li>
+        <li>
+          <span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
+          <input type="radio" name="ice-banner" value="ice-2">
+        </li>
+        <li>
+          <span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
+          <input type="radio" name="ice-banner" value="ice-3">
+          </li>    
+      </ul>
     </div>
     
     <main class="container">
@@ -117,8 +189,9 @@
           <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <!-- Форму пока размечать необязательно -->
-          <form action="" method="">
-            <input type="email" name="" placeholder="Электронная почта">
+          <form class="form-emeail" action="https://echo.htmlacademy.r" method="post">
+            <label for="email"><span class="visually-hidden">Электронная почта</span></label>
+            <input type="email" id="email" name="почта" placeholder="Электронная почта">
             <button class="button button-mailing">Отправить</button>
           </form>
         </div>
@@ -127,7 +200,8 @@
       <adress>    
         <h2 class="visually-hidden">Как с нами связаться</h2>
         <div class="map">
-          <img src="/img/map.png" width="1200" height="430" alt="карта проезда"><!-- пока не очень понимаю как будет метка на карту накладываться. Будет ли карта статичной картинкой или интерактивной, поэтому пока так картинки вставила -->
+          <img src="/img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
+          19/8">
           <img src="/img/pin.svg" width="80" height="140" alt="Метка на карте">
         </div>
         <div class="feedback">
@@ -176,45 +250,9 @@
     </div>  
     </footer>
     
-    <section class="modal modal-catalog">
-       <ul class="modal-catalog-list">
-         <li><a href="#">Новинки</a></li>
-         <li><a href="#">Сливочное</a></li>
-         <li><a href="#">Щербеты</a></li>
-         <li><a href="#">Фруктовый лед</a></li>
-         <li><a href="#">Мелорин</a></li>
-       </ul>
-     </section>
+
     
      <!--Здесь будут формы (пока не обязательно размечать)--> 
-     <section class="modal-login">
-       <h2 class="visually-hidden">Форма входа</h2>
-       <form action="">
-         <input type="email" name="" placeholder="Электронная почта">
-         <input type="password" name="" placeholder="Пароль">
-         <button class="button">Войти</button> 
-         <a href="#">Забыли пароль?</a>
-         <a href="">Новая регистрация</a> 
-       </form> 
-     </section>
-     
-     <section class="modal-search">
-       <h2 class="visually-hidden">Поиск</h2>
-       <form action="">
-         <input type="" name="" placeholder="Поиск">  
-       </form>
-         
-     </section>
-     
-      <section class="modal-feedback">
-       <h2>Мы обязательно вам ответим!</h2>
-       <form action="">
-         <input type="text" name="" placeholder="Как вас зовут?">
-         <input type="text" name="" placeholder="Ваша почта для ответа">
-         <textarea name="" id="" cols="30" rows="7">Напишите что-нибудь...</textarea>
-         <button class="button">Отправить</button> 
-       </form> 
-       <span class="model-close">x</span>      
-     </section>
+
   </body>
 </html>
