@@ -41,7 +41,7 @@
                   <span class="visually-hidden">Электронная почта</span>
                   <input type="email" name="email" placeholder="Электронная почта">
                   <span class="visually-hidden">Пароль</span>
-                  <input type="password" name="password" placeholder=Пароль>
+                  <input type="password" name="password" placeholder="Пароль">
                   <button class="button button-login" type="submit">Войти</button>    
                 </form>
                 <a href="#">Забыли пароль?</a>
@@ -61,14 +61,14 @@
                      <td>Стоимость</td>
                    </tr>
                    <tr>
-                     <td><button class="button-close" type="button">X</button></td>
+                     <td><button class="button-close" type="button"></button></td>
                      <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                      <td>Пломбир с апельсиновым джемом</td>
                      <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
                      <td>300 руб.</td>
                    </tr>
                    <tr>
-                      <td><button class="button-close" type="button">X</button></td>
+                      <td><button class="button-close" type="button"></button></td>
                      <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                      <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                      <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
@@ -91,17 +91,17 @@
     <div class="slider">
       <ul>
         <li>
-          <span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span>
-          <input type="radio" name="ice-banner" value="ice-1" checked>
-          </li>
-        <li>
-          <span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
-          <input type="radio" name="ice-banner" value="ice-2">
+          <button><span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span>
+          <input type="radio" name="ice-banner" value="ice-1" checked></button>
         </li>
         <li>
-          <span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
-          <input type="radio" name="ice-banner" value="ice-3">
-          </li>    
+           <button><span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
+          <input type="radio" name="ice-banner" value="ice-2"></button>
+        </li>
+        <li>
+          <button><span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
+          <input type="radio" name="ice-banner" value="ice-3"></button>
+        </li>    
       </ul>
     </div>
     
@@ -188,7 +188,7 @@
         <div class="mailing">
           <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!-- Форму пока размечать необязательно -->
+       
           <form class="form-emeail" action="https://echo.htmlacademy.r" method="post">
             <label for="email"><span class="visually-hidden">Электронная почта</span></label>
             <input type="email" id="email" name="почта" placeholder="Электронная почта">
@@ -249,10 +249,23 @@
       <p>Cделано в <a href="#">HTML Академии</a> © 2017</p>
     </div>  
     </footer>
-    
-
-    
-     <!--Здесь будут формы (пока не обязательно размечать)--> 
-
+    <div class="feedback-popup">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <button class="button-close" type="button"></button>
+      <p class="fedback-message">Мы обязательно вам ответим!</p> 
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually hidden" for="feedback-name">Имя</label>
+        <input type="text" name="имя" placeholder="Как вас зовут" id="feedback-name">
+        
+        <label class="visually-hidden" for="feedback-email">Почта</label>
+        <input type="email" name="почта" placeholder="Ваша почта для ответа" id="feedback-email">
+        
+        <label class="visually-hidden" for="feedback-comment">Ваши комментарии</label>
+        <textarea name="comment" id="feedback-comment" cols="30" rows="10">Напишите что-нибудь...</textarea>
+        
+        <button type="submit" class="button button-feedback">Отправить</button>     
+      </form>
+        
+    </div>
   </body>
 </html>
