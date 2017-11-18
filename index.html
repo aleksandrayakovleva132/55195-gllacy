@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -12,11 +15,11 @@
         </a>
         <ul class="main-menu">
           <li><a href="#">Каталог</a>
-            <ul class="sub-menu">
-              <li><a href="#">Новинки</a></li>
-              <li><a href="#">Сливочное</a></li>
-              <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фруктовый лед</a></li>
+            <ul class="menu-catalog-list">
+              <li class="menu-catalog-item"><a href="#">Новинки</a></li>
+              <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
+              <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
+              <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
             </ul>
           </li>
           <li><a href="#">Доставка и оплата</a></li>
@@ -25,8 +28,8 @@
           
         <ul class="user-navigation">
           <li class="user-navigation-search">
-            <button class="button button-search"><span class="visually-hidden">Поиск</span></button>
-              <ul class="sub-menu">
+            <a><span class="visually-hidden">Поиск</span></a>
+              <ul class="search-list">
                 <li>
                   <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
                     <input type="search" name="поиск" placeholder="Поиск">
@@ -35,7 +38,7 @@
                </ul>
           </li>
           <li class="user-navigation-login"><a href="#">Вход</a>
-            <ul class="sub-menu">
+            <ul class="login-list">
               <li>
                 <form class="form-login" action="https://echo.htmlacademy.ru">
                   <span class="visually-hidden">Электронная почта</span>
@@ -50,7 +53,7 @@
             </ul>
            </li>
            <li><a href="#"><span class="visually-hidden">Корзина</span></a>
-             <ul class="sub-menu">
+             <ul class="basket-list">
                  <li><span class="visually-hidden">Таблица товаров</span>
                  <table class="besket-item">
                    <tr class="visually-hidden">
@@ -89,7 +92,7 @@
     </header>
     <!-- Cлайдер -->
     <div class="slider">
-      <ul>
+      <ul class="slider-list">
         <li>
           <button><span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span>
           <input type="radio" name="ice-banner" value="ice-1" checked></button>
@@ -111,9 +114,9 @@
       <section class="big-banner">
         <h2 class="visually-hidden">Лучшее предложение</h2> 
         <ul class="banner-list-ice">
-          <li class="banner-item ice-1"><img src="img/icecream-banner1.png" width="1045" heigh="881" alt="Крем-брюле и пломбир с малиновым джемом"><span>Крем-брюле и пломбир с малиновым   джемом</span></li>
-          <li class="banner-item ice-2"><img src="/img/icecream-banner2.png" width="1045" heigh="881" alt="Шоколадный пломбир и лимонный сорбет"><span>Шоколадный пломбир и лимонный сорбет</span></li>
-          <li class="banner-item ice-3"><img src="img/icecream-banner3.png" width="1045" heigh="881" talt="Пломбир с помадкой и клубничный щербет"><span>Пломбир с помадкой и клубничный щербет</span></li>
+          <li class="banner-item ice-1"><img src="img/icecream-banner1.png" width="1045" heigh="881" alt="Крем-брюле и пломбир с малиновым   джемом"><span>Крем-брюле и пломбир с малиновым джемом</span></li>
+          <li class="banner-item ice-2"><img src="img/icecream-banner2.png" width="1045" heigh="881" alt="Шоколадный пломбир и лимонный сорбет"><span>Шоколадный пломбир и лимонный сорбет</span></li>
+          <li class="banner-item ice-3"><img src="img/icecream-banner3.png" width="1045" heigh="881" alt="Пломбир с помадкой и клубничный щербет"><span>Пломбир с помадкой и клубничный щербет</span></li>
         </ul>
         <button class="button big-banner-button">Давайте оба!</button>
       </section> 
@@ -121,12 +124,12 @@
         <h2 class="visually-hidden">Акции</h2>
         <div class="sale sale-first">
             <h3 class="sale-head">Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <p class="sale-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <button class="button button-sale-first">Хочу варенье!</button> 
         </div> 
         <div class="sale sale-second">
             <h3 class="sale-head">Шоколадка даром!</h3>
-            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку   вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
+            <p lass="sale-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку   вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
             <button class="button button-sale-second">Хочу шоколадки!</button> 
         </div>  
       </section>
@@ -136,32 +139,32 @@
         <ul class="catalog-list index">
           <li class="catalog-item index">
             <a href="#">
-              <img src="/img/tov-1.jpg" width="267" height="267"  alt="Cливочое с апельсиновым джемом и цитрусовой стружкой">
-              <span class="cost">310 ₽</span><span class="kg">/kg</span>
+              <img src="img/tov-1.jpg" width="267" height="267"  alt="Cливочое с апельсиновым джемом и цитрусовой стружкой">
+              <span class="cost">310 ₽</span><span class="kg">/кг</span>
               <p class="name-ice-cream">Cливочое с апельсиновым джемом и цитрусовой стружкой</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
           </li>
           <li class="catalog-item index">
             <a href="#">
-              <img src="/img/tov-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада" class="button button-catalog">
-              <span class="cost">380 ₽</span><span class="kg">/kg</span>
+              <img src="img/tov-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <span class="cost">380 ₽</span><span class="kg">/кг</span>
               <p class="name-ice-cream">Сливочно-кофейное с кусочками шоколада</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
           </li>
           <li class="catalog-item index">
             <a href="#">
-              <img src="/img/tov-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <span class="cost">355 ₽</span><span class="kg">/kg</span>
+              <img src="img/tov-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <span class="cost">355 ₽</span><span class="kg">/кг</span>
               <p class="name-ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
           </li>
           <li class="catalog-item index">
             <a href="#">
-              <img src="/img/tov-4.jpg" width="267" height="267" alt="Cливочное крем-брюле с карамельной подливкой">
-              <span class="cost">415 ₽</span><span class="kg">/kg</span>
+              <img src="img/tov-4.jpg" width="267" height="267" alt="Cливочное крем-брюле с карамельной подливкой">
+              <span class="cost">415 ₽</span><span class="kg">/кг</span>
               <p class="name-ice-cream">Cливочное крем-брюле с карамельной подливкой</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
@@ -172,10 +175,12 @@
         <h2 class="desciprion-head">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
         <ul class="description-left">
           <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          
           <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
         </ul>
         <ul class="description-right">
           <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          
           <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>  
         </ul>
       </section>
@@ -208,10 +213,10 @@
           <p>
           Адрес главного офиса<br>
           И офлайн магазина:<br>
-          <span class="address">Ул. Большая Конюшенная<br>
+          <span class="adress">Ул. Большая Конюшенная<br>
           19/8, Cанкт-Петербург</span><br>
           Для заказов по телефону:<br>
-          <a href="tel:+78124502525"></a><b>8 812 450-25-25</b><br>
+          <a class="phone" href="tel:+78124502525">8 812 450-25-25</a><br>
           (c 10 до 20 ежедневно)
           </p>
           <button class="button button-feedback">Форма обратной связи</button>
@@ -223,16 +228,16 @@
     <div class="footer-social">
       <ul class="footer-social-list">
         <li>
-          <a href="#" target="_blank"><img src="" width="" height="" alt="Твиттер"></a>
+          <a class="twiter" href="#" target="_blank" ><span class="visually hidden">Твиттер</span></a>
         </li>
         <li>
-          <a href="#" target="_blank"><img src="" width="" height="" alt="Инстаграм"></a>
+          <a class="instagram" href="#" target="_blank"><span class="visually hidden">Инстаграмм</span></a>
         </li>
         <li>
-          <a href="#" target="_blank"><img src="" width="" height="" alt="Фейсбук"></a>
+          <a class="fb" href="#" target="_blank"><span class="visually hidden">Фейсбук</span></a>
         </li>
         <li>
-          <a href="#" target="_blank"><img src="" width="" height="" alt="Вконтакте"></a>
+          <a class="vk" classhref="#" target="_blank"><span class="visually hidden">Вконтакте</span></a>
         </li>        
       </ul>
     </div> 
