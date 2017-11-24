@@ -8,24 +8,27 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
+   <div class="body-index">
     <header class="main-header">
       <nav class="main-navigation">
-        <a href="/" class="main-header-logo">
-          <img src="img/logo-header.svg" width="154" height="64" alt="Логотип «Глейси»">    
-        </a>
+       <div class="logo"><a href="/" class="main-header-logo">
+             <img src="img/logo-header.svg" width="154" height="auto" alt="Логотип «Глейси»"></a></div>
         <ul class="main-menu">
-          <li><a href="#">Каталог</a>
-            <ul class="menu-catalog-list">
-              <li class="menu-catalog-item"><a href="#">Новинки</a></li>
-              <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
-              <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
-              <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О компании</a></li>
-        </ul>
-          
+              <li><a href="#">Каталог</a>
+              <ul class="menu-catalog-list">
+                <li class="menu-catalog-item"><a href="#">Новинки</a></li>
+                <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
+                <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
+                <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+        
+          </ul>
+        
         <ul class="user-navigation">
           <li class="user-navigation-search">
             <a><span class="visually-hidden">Поиск</span></a>
@@ -35,9 +38,9 @@
                     <input type="search" name="поиск" placeholder="Поиск">
                   </form>    
                 </li>
-               </ul>
+             </ul>
           </li>
-          <li class="user-navigation-login"><a href="#">Вход</a>
+          <li class="user-navigation-login"><a href="#"><span >Вход</span></a>
             <ul class="login-list">
               <li>
                 <form class="form-login" action="https://echo.htmlacademy.ru">
@@ -50,9 +53,9 @@
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>   
               </li>
-            </ul>
+           </ul>
            </li>
-           <li><a href="#"><span class="visually-hidden">Корзина</span></a>
+           <li class="user-navigation-bascet"><a href="#">Пусто<span class="visually-hidden">Корзина</span></a>
              <ul class="basket-list">
                  <li><span class="visually-hidden">Таблица товаров</span>
                  <table class="besket-item">
@@ -84,39 +87,56 @@
              </ul>
            </li>
         </ul>
-      </nav>    
+        
+      </nav>
       <div class="contacts-navigation">
         <span class="contacts-navigation-timing">С 10 до 20, ежедневно</span><br>
         <a href="tel:+78124502525" class="contacts-navigation-phone">8 812 450-25-25</a>    
       </div>     
     </header>
-    <!-- Cлайдер -->
+    
     <div class="slider">
       <ul class="slider-list">
-        <li>
-          <button><span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span>
-          <input type="radio" name="ice-banner" value="ice-1" checked></button>
+        <li class="slider-list-first">
+          <img src="img/icecream-banner1.png" width="1200" heigh="881" alt="Крем-брюле и пломбир с малиновым джемом">
         </li>
-        <li>
-           <button><span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
-          <input type="radio" name="ice-banner" value="ice-2"></button>
+        <li class="slider-list-second">
+           <img src="img/icecream-banner2.png" width="1200" heigh="881" alt="Шоколадный пломбир и лимонный сорбет">
         </li>
-        <li>
-          <button><span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
-          <input type="radio" name="ice-banner" value="ice-3"></button>
+        <li class="slider-list-third">
+          
+          <img src="img/icecream-banner3.png" width="1200" heigh="881" alt="Пломбир с помадкой и клубничный щербет">
         </li>    
       </ul>
     </div>
     
+    <div class="slider-button">
+      <ul class="slider-button-list">
+        <li class="slider-button-item">
+          <button ><span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span><input type="radio" name="ice-banner" value="ice-1" checked></button> 
+        </li>
+        <li class="slider-button-item">
+          <button ><span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
+          <input type="radio" name="ice-banner" value="ice-2">
+          </button>
+         </li>
+         <li class="slider-button-item">
+           <button ><span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
+           <input type="radio" name="ice-banner" value="ice-3">
+          </button>  
+         </li>
+      </ul>
+    </div>
+    
     <main class="container">
-      <h1 сlass="visually-hidden">Магазин «Глейси»</h1>
+      <h1 class="visually-hidden">Магазин "Глейси"</h1>
       
       <section class="big-banner">
         <h2 class="visually-hidden">Лучшее предложение</h2> 
         <ul class="banner-list-ice">
-          <li class="banner-item ice-1"><img src="img/icecream-banner1.png" width="1045" heigh="881" alt="Крем-брюле и пломбир с малиновым   джемом"><span>Крем-брюле и пломбир с малиновым джемом</span></li>
-          <li class="banner-item ice-2"><img src="img/icecream-banner2.png" width="1045" heigh="881" alt="Шоколадный пломбир и лимонный сорбет"><span>Шоколадный пломбир и лимонный сорбет</span></li>
-          <li class="banner-item ice-3"><img src="img/icecream-banner3.png" width="1045" heigh="881" alt="Пломбир с помадкой и клубничный щербет"><span>Пломбир с помадкой и клубничный щербет</span></li>
+          <li class="banner-item ice-1"><span>Крем-брюле и пломбир<br>с малиновым джемом</span></li>
+          <li class="banner-item ice-2"><span>Шоколадный пломбир и лимонный сорбет</span></li>
+          <li class="banner-item ice-3"><span>Пломбир с помадкой и клубничный щербет</span></li>
         </ul>
         <button class="button big-banner-button">Давайте оба!</button>
       </section> 
@@ -140,7 +160,7 @@
           <li class="catalog-item index">
             <a href="#">
               <img src="img/tov-1.jpg" width="267" height="267"  alt="Cливочое с апельсиновым джемом и цитрусовой стружкой">
-              <span class="cost">310 ₽</span><span class="kg">/кг</span>
+                <div class="cost-and-kg"><span class="cost ">310 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Cливочое с апельсиновым джемом и цитрусовой стружкой</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
@@ -148,7 +168,7 @@
           <li class="catalog-item index">
             <a href="#">
               <img src="img/tov-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-              <span class="cost">380 ₽</span><span class="kg">/кг</span>
+                <div class="cost-and-kg"><span  class="cost">380 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Сливочно-кофейное с кусочками шоколада</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
@@ -156,7 +176,7 @@
           <li class="catalog-item index">
             <a href="#">
               <img src="img/tov-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-              <span class="cost">355 ₽</span><span class="kg">/кг</span>
+                <div class="cost-and-kg"><span class="cost">355 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
@@ -164,7 +184,7 @@
           <li class="catalog-item index">
             <a href="#">
               <img src="img/tov-4.jpg" width="267" height="267" alt="Cливочное крем-брюле с карамельной подливкой">
-              <span class="cost">415 ₽</span><span class="kg">/кг</span>
+                <div class="cost-and-kg"><span class="cost">415 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Cливочное крем-брюле с карамельной подливкой</p>
               <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
@@ -173,16 +193,18 @@
       </section>
       <section class="description">
         <h2 class="desciprion-head">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+        <div class="description-column">
         <ul class="description-left">
           <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          
+          <br>
           <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
         </ul>
         <ul class="description-right">
           <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          
+          <br>
           <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>  
         </ul>
+      </div>
       </section>
       <section class="publications">
         <article class="preview-blog">
@@ -205,13 +227,11 @@
       <adress>    
         <h2 class="visually-hidden">Как с нами связаться</h2>
         <div class="map">
-          <img src="/img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
+          <img src="img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
           19/8">
-          <img src="/img/pin.svg" width="80" height="140" alt="Метка на карте">
-        </div>
-        <div class="feedback">
-          <p>
-          Адрес главного офиса<br>
+          <img class="mark" src="img/pin.svg" width="80" height="140" alt="Метка на карте">
+         <div class="feedback">
+          <p> Адрес главного офиса<br>
           И офлайн магазина:<br>
           <span class="adress">Ул. Большая Конюшенная<br>
           19/8, Cанкт-Петербург</span><br>
@@ -221,6 +241,8 @@
           </p>
           <button class="button button-feedback">Форма обратной связи</button>
         </div>
+        </div>
+       
       </adress>
     </main>
     
@@ -272,5 +294,6 @@
       </form>
         
     </div>
+   </div>
   </body>
 </html>
