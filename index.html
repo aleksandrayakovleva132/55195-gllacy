@@ -5,10 +5,15 @@
     <title>HTML Academy: Глейси</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-   <div class="body-index">
+  <input class="visually-hidden" type="radio" id="icecream-1" name="toggle" checked>
+   <input class="visually-hidden" type="radio" id="icecream-2" name="toggle">
+   <input class="visually-hidden" type="radio" id="icecream-3" name="toggle">   
+  
+    <div class="site-wrapper">
+    <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
        <div class="logo"><a href="/" class="main-header-logo">
@@ -87,7 +92,6 @@
              </ul>
            </li>
         </ul>
-        
       </nav>
       <div class="contacts-navigation">
         <span class="contacts-navigation-timing">С 10 до 20, ежедневно</span><br>
@@ -95,62 +99,50 @@
       </div>     
     </header>
     
-    <div class="slider">
-      <ul class="slider-list">
-        <li class="slider-list-first">
-          <img src="img/icecream-banner1.png" width="1200" heigh="881" alt="Крем-брюле и пломбир с малиновым джемом">
-        </li>
-        <li class="slider-list-second">
-           <img src="img/icecream-banner2.png" width="1200" heigh="881" alt="Шоколадный пломбир и лимонный сорбет">
-        </li>
-        <li class="slider-list-third">
-          
-          <img src="img/icecream-banner3.png" width="1200" heigh="881" alt="Пломбир с помадкой и клубничный щербет">
-        </li>    
-      </ul>
-    </div>
-    
-    <div class="slider-button">
-      <ul class="slider-button-list">
-        <li class="slider-button-item">
-          <button ><span class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</span><input type="radio" name="ice-banner" value="ice-1" checked></button> 
-        </li>
-        <li class="slider-button-item">
-          <button ><span class="visually-hidden">Шоколадный пломбир и лимонный сорбет</span>
-          <input type="radio" name="ice-banner" value="ice-2">
-          </button>
-         </li>
-         <li class="slider-button-item">
-           <button ><span class="visually-hidden">Пломбир с помадкой и клубничный щербет</span>
-           <input type="radio" name="ice-banner" value="ice-3">
-          </button>  
-         </li>
-      </ul>
-    </div>
-    
-    <main class="container">
+        
+    <main>
       <h1 class="visually-hidden">Магазин "Глейси"</h1>
-      
-      <section class="big-banner">
-        <h2 class="visually-hidden">Лучшее предложение</h2> 
-        <ul class="banner-list-ice">
-          <li class="banner-item ice-1"><span>Крем-брюле и пломбир<br>с малиновым джемом</span></li>
-          <li class="banner-item ice-2"><span>Шоколадный пломбир и лимонный сорбет</span></li>
-          <li class="banner-item ice-3"><span>Пломбир с помадкой и клубничный щербет</span></li>
-        </ul>
-        <button class="button big-banner-button">Давайте оба!</button>
-      </section> 
+      <section class="slider">
+        <div class="slider-controls">
+        <label for="icecream-1"></label>
+        <label for="icecream-2"></label>
+        <label for="icecream-3"></label>    
+        </div>
+        <ul class="slider-list">
+          <li class="slider-item slide" id="slide-1">
+            <h3 class="slide-title"> 
+             Крем-брюле и пломбир с малиновым джемом   
+            </h3>
+            <a class="button big-banner-button" href="#">Давайте оба!</a>  
+          </li>
+          <li class="slider-item slide" id="slide-2">
+            <h3 class="slide-title"> 
+             Шоколадный пломбир и лимонный сорбет   
+            </h3>
+            <a class="button big-banner-button" href="#">Давайте оба!</a>  
+          </li>
+          <li class="slider-item slide" id="slide-3">
+            <h3 class="slide-title"> 
+            Пломбир с помадкой и клубничный щербет
+            </h3>
+            <a class="button big-banner-button" href="#">Давайте оба!</a>  
+          </li>  
+             
+        </ul>  
+      </section>
+    
+       
       <section class="ice-cream-sale">
         <h2 class="visually-hidden">Акции</h2>
         <div class="sale sale-first">
             <h3 class="sale-head">Малинка даром!</h3>
             <p class="sale-description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <button class="button button-sale-first">Хочу варенье!</button> 
+            <button class="button button-sale">Хочу варенье!</button> 
         </div> 
         <div class="sale sale-second">
             <h3 class="sale-head">Шоколадка даром!</h3>
-            <p lass="sale-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку   вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
-            <button class="button button-sale-second">Хочу шоколадки!</button> 
+            <p class="sale-description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку   вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
+            <button class="button button-sale">Хочу шоколадки!</button> 
         </div>  
       </section>
       
@@ -162,7 +154,7 @@
               <img src="img/tov-1.jpg" width="267" height="267"  alt="Cливочое с апельсиновым джемом и цитрусовой стружкой">
                 <div class="cost-and-kg"><span class="cost ">310 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Cливочое с апельсиновым джемом и цитрусовой стружкой</p>
-              <button class="button button-catalog">Быстрый просмотр</button>  
+              <button class="button button-catalog">Быстрый просмотр</button> 
             </a>  
           </li>
           <li class="catalog-item index">
@@ -170,7 +162,7 @@
               <img src="img/tov-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                 <div class="cost-and-kg"><span  class="cost">380 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Сливочно-кофейное с кусочками шоколада</p>
-              <button class="button button-catalog">Быстрый просмотр</button>  
+             <button class="button button-catalog ">Быстрый просмотр</button>  
             </a>  
           </li>
           <li class="catalog-item index">
@@ -178,7 +170,7 @@
               <img src="img/tov-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                 <div class="cost-and-kg"><span class="cost">355 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</p>
-              <button class="button button-catalog">Быстрый просмотр</button>  
+            <button class="button button-catalog ">Быстрый просмотр</button>  
             </a>  
           </li>
           <li class="catalog-item index">
@@ -186,7 +178,7 @@
               <img src="img/tov-4.jpg" width="267" height="267" alt="Cливочное крем-брюле с карамельной подливкой">
                 <div class="cost-and-kg"><span class="cost">415 ₽</span><span class="kg">/кг</span></div>
               <p class="name-ice-cream">Cливочное крем-брюле с карамельной подливкой</p>
-              <button class="button button-catalog">Быстрый просмотр</button>  
+             <button class="button button-catalog">Быстрый просмотр</button>  
             </a>  
           </li>
         </ul>   
@@ -198,9 +190,12 @@
           <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <br>
           <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+              
         </ul>
         <ul class="description-right">
           <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          
+    
           <br>
           <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>  
         </ul>
@@ -213,14 +208,16 @@
         </article>
       
         <div class="mailing">
+         <div class="mailing-container">
           <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
        
-          <form class="form-emeail" action="https://echo.htmlacademy.r" method="post">
+          <form class="form-email" action="https://echo.htmlacademy.r" method="post">
             <label for="email"><span class="visually-hidden">Электронная почта</span></label>
-            <input type="email" id="email" name="почта" placeholder="Электронная почта">
+            <input  type="email" id="email" name="почта" placeholder="Электронная почта">
             <button class="button button-mailing">Отправить</button>
           </form>
+          </div>
         </div>
       </section>
       
@@ -295,5 +292,6 @@
         
     </div>
    </div>
-  </body>
+   </div>
+ </body>
 </html>

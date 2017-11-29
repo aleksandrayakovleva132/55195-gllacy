@@ -4,7 +4,7 @@ body {
   line-height: 22px;
   color: #ffffff;
     
-  background-color: #849d8f;  
+
 }
 .body-index{
    /** background-color: royalblue; **/
@@ -12,10 +12,19 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.site-wrapper {
+ min-width: 940px;   
+ background-color: #849d8f;
+ background-image: url(img/icecream-banner1.png);  
+ background-repeat: no-repeat;  
+ background-position: top center;    
+ transition: background-image 0.5s ease, background-color 0.5s ease;   
+}
+
 .container {
  width: 1200px;   
  margin-left: auto;
- margin-right: auto;
+ margin-right: auto;  
 }
 
 a {
@@ -50,7 +59,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 .button {
   color:#fefefe;
@@ -149,7 +157,7 @@ input[type="radio"].visually-hidden {
   width: 1146px;
   min-height: 74px;
   margin: auto;
-* background: rgba(234, 255, 45, 0.2);
+/* background: rgba(234, 255, 45, 0.2);
   box-shadow: inset 0 0 0 2px rgb(234, 255, 45); */    
 }
 .logo {
@@ -182,12 +190,15 @@ input[type="radio"].visually-hidden {
   display: block;
   padding: 7px 14px;
     
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);  
+ /* background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45); */  
     
 } 
 
 .user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;  
   padding: 0;
   margin: 0;
   display: flex;
@@ -223,34 +234,55 @@ input[type="radio"].visually-hidden {
   background-color: #f6b5a5;    
 }
 
-
-.user-navigation-login {
-  font-size: 14px;
-  font-weight: 500;
-}
 .user-navigation-search {
     width: 32px;
     height: 32px;
     border-radius: 50%; 
-    background-color: #9db1a5;
+    background-color: rgba(255,255,255,0.2);
+    background-image: url("img/ic-search.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    background-position: center;
     
 }
 .user-navigation-login {
   width: 92px;
-  height: 32px;
-  background-color: #9db1a5;
+  
+  background-color: rgba(255,255,255,0.2);
   border-radius: 40px;
-  margin-left: 10px;    
+  margin-left: 10px;  
+  background-image: url("img/ic-login.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 19px;
+  background-position: 17px 7px;  
 }
 
-.user-navigation-bascet {
-  width: 92px;
-  height: 32px;
-  background-color: #9db1a5;
-  border-radius: 40px; 
-  margin-left: 10px;   
+.user-navigation-login a{
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;  
+  padding-right: 6px; 
+  padding-left: 44px;  
 }
-.basket-list {
+.user-navigation-bascet {
+  width: 117px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 40px; 
+  margin-left: 10px;
+  background-image: url(img/ic-bascet.svg);
+  background-repeat: no-repeat; 
+  background-size: 21px 20px;
+  background-position: 16px 7px; 
+}
+
+
+.user-navigation-bascet a{
+  display: inline-block;
+  padding-left: 45px;
+  padding-top: 8px;
+  padding-bottom: 8px;  
+}
+.basket-list{ 
   display: none;    
 }
 .contacts-navigation {
@@ -300,65 +332,94 @@ input[type="radio"].visually-hidden {
 {
   list-style: none;
 }
-.slider-list{
-  margin-left: ;
-  margin-right: auto;
-}
-
 .slider {
- width: 1200px;
- margin-right: auto;
- margin-left: auto;
- position: absolute;  
- top: 0;    
- 
- z-index: -1;
+  position: relative;
+  text-align: center; 
+  margin-bottom: 40px;  
+}
+.slider-list{
+  margin: 0;
+  padding: 0;
 }
 
-.slider-list-first{
+.slide-title {
+  width: 700px;
+  padding: 0;  
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 27px;     
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  
+  vertical-align: top;
+    
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#icecream-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("img/icecream-banner1.png");  
+}
+#icecream-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("img/icecream-banner2.png");  
+}
+#icecream-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("img/icecream-banner3.png");  
+}
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+.slide {
+  display: none;    
+}
+
+#icecream-1:checked ~ .site-wrapper #slide-1,
+#icecream-2:checked ~ .site-wrapper #slide-2,
+#icecream-3:checked ~ .site-wrapper #slide-3 {
+  display: block;  
+}
+
+#icecream-1:checked ~ .site-wrapper label[for="icecream-1"],
+#icecream-2:checked ~ .site-wrapper label[for="icecream-2"],
+#icecream-3:checked ~ .site-wrapper label[for="icecream-3"] {
+  background-color: #ffffff;  
+}
+
+.slider-list-first,
+.slider-list-second,
+.slider-list-third{
   padding: 0;
   margin: 0;
   position: absolute;  
   top: 0;
   left: 0; 
-
-}
-.slider-button {
-  padding: 0;  
-  margin: 0;
-  width: 80px;
-  position: absolute;    
- }
-
-.slider-button-list {
-  padding: 0;
-  margin: 0;  
-  display: flex;
-  margin-left: 27px;  
-  margin-top: 173px;
 }
 
-.big-banner {
- display: flex;
- flex-direction: column;
- min-height:  219px;
- justify-content: space-between;
- margin-bottom: 36px;   
-}
-
-.big-banner {
- display: flex;
- flex-direction: column;
- min-height:  219px;
- justify-content: space-between;
- margin-bottom: 36px;   
-}
 
 .big-banner-button {
   margin-left: auto;
   margin-right: auto;  
 }
-
 
 .banner-item{
   font-size: 60px;
@@ -366,25 +427,35 @@ input[type="radio"].visually-hidden {
   list-style: none;
   font-weight: 700;
   text-align: center;
- 
 }
 
+.ice-cream-sale {
+ padding: 0;   
+ width: 1147px;
+ margin: 0 auto;
 
-.banner-list-ice li:nth-child(2),
-.banner-list-ice li:nth-child(3),
-.slider-list-second img,
-.slider-list-third img{
-    display: none;
+ display: flex;
+ min-height: 230px;
+ justify-content: space-between; 
+ margin-bottom: 34px;
 }
+
 .sale {
   width: 560px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+      
 }
 
-.sale-first {
-  background-color: aqua;  
+.button.button-sale {
+  margin-left: auto;
+  margin-right: 21px;
+  height: 45px;  
 }
 
- .sale.sale-first {
+.sale.sale-first {
   background-image: url("img/bg-raspberry.jpg");
   background-repeat: no-repeat;
   border-radius: 14px;
@@ -396,29 +467,36 @@ input[type="radio"].visually-hidden {
   border-radius: 14px; 
 }
 .sale-head {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  margin-top: 23px;
+  margin-right: 20px;
+  margin-left: 20px;  
   font-size: 35px;
   line-height: 41px;  
 }
 .sale-description {
+  margin: 0;
+  padding: 0; 
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 700;    
+  font-weight: 700;
+  
 }
-.ice-cream-sale {
- width: 1147px;
- margin-right: auto;
- margin-left: auto;   
- display: flex;
- min-height: 230px;
- justify-content: space-between; 
- margin-bottom: 34px;
-}
+
 
 .catalog-list.index,
 .catalog-list.catalog {
   list-style: none;  
 }
 
+.catalog.index {
+  position: relative;
+}
 .catalog-list.index{
   padding: 0;
   margin:0;  
@@ -426,16 +504,17 @@ input[type="radio"].visually-hidden {
   display:flex;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: -40px;
+  
 }
 
 .catalog-item.index {
   width: 295px;
-  height: 407px;
+  padding-top: 6px;  
+  padding-left: 11px;  
+  
    
   display: flex;
   flex-direction: column;
-  justify-content:   
 }
 
 .catalog-item.index::before {
@@ -443,7 +522,8 @@ input[type="radio"].visually-hidden {
 }
 
 .cost-and-kg {
- position: absolute;  
+ position: absolute; 
+ top: 219px;   
 }
 
 .cost {
@@ -460,21 +540,36 @@ input[type="radio"].visually-hidden {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);  
 }
 
-.name-ice-cream {
+.name-ice-cream { 
+  margin:0;
+  margin-top: 9px;
+  margin-bottom: 40px;  
   font-size: 16px;
   line-height: 22px;
+  text-align: center;
+  width: 255px; 
 }
 
 .catalog-item img{
  border-radius: 50%;
      
 }
+
+.button.button-catalog {
+  margin-left: 21px;
+  margin-bottom: 21px; 
+  display: none;  
+  }
+.catalog-item:hover .button-catalog {
+   display: block; 
+}
+
 .catalog-item.index:hover,
 .catalog-item.catalog:hover{
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  
+  margin-bottom: 40px;  
 } 
 .catalog-item.index a:hover,
 .catalog-item.catalog a:hover{
@@ -487,9 +582,11 @@ input[type="radio"].visually-hidden {
   width: 61px;  
   background-image: url("img/ic-hit.svg"); 
 }
+
+
 .description {
   background-image: url("img/bg-wafer.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   border-radius: 14px;  
   font-size: 16px; 
   line-height: 22px;
@@ -500,15 +597,22 @@ input[type="radio"].visually-hidden {
   margin-right: auto;
   margin-left: auto;  
   margin-bottom: 40px;
+    
+  display: flex;
+  flex-wrap: wrap;
 }
 .desciprion-head {
-  width: 1040px;  
+  width: 1040px;
+  margin-top: 27px;
+  margin-left: 20px;
+  margin-bottom: 8px; 
 }
 
 .description-column {
-  display: flex;  
+  margin: 0;
+  padding: 0;  
+  display: flex;
 }
-
 .description h2 {
   color: #323232;
   font-size: 24px;
@@ -517,16 +621,29 @@ input[type="radio"].visually-hidden {
 .description ul {
   color: #323232;
   list-style: none;
+    
+}
+
+.description li{
+  position: relative;   
 }
 
 .description-left{
+  margin: 0;
+  margin-top: 16px; 
   width: 484px; 
   padding-left: 77px;
+  margin-bottom: 25px;
+  
 }
 
 .description-right{
+  margin: 0;
+  margin-top: 16px; 
   width: 487px; 
   padding-left: 83px;
+  margin-bottom: 25px; 
+   
 }
 
 
@@ -536,7 +653,9 @@ input[type="radio"].visually-hidden {
   height: 49px;  
   width: 49px;  
   background-image: url("img/ic-icecream.svg");
-  position: absolute;  
+  position: absolute;
+  top: -15px;
+  left: -57px;
 }
 
 .description-left li:last-child::before {
@@ -545,7 +664,9 @@ input[type="radio"].visually-hidden {
   height: 49px;  
   width: 49px;  
   background-image: url("img/ic-leaf.svg");
-  position: absolute;  
+  position: absolute;
+  top: -15px;
+  left: -57px;  
 }
 
 .description-right li:first-child::before {
@@ -554,7 +675,9 @@ input[type="radio"].visually-hidden {
   height: 49px;  
   width: 49px;  
   background-image: url("img/ic-cow.svg");
-  position: absolute;  
+  position: absolute; 
+  top: -15px;
+  left: -57px;  
 }
 
 .description-right li:last-child::before {
@@ -564,6 +687,8 @@ input[type="radio"].visually-hidden {
   width: 49px;  
   background-image: url("img/ic-termo.svg");
   position: absolute;  
+  top: -15px;
+  left: -57px;  
 }
 
 .publications {
@@ -575,17 +700,23 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   margin-bottom: 40px; 
 }
-.preview-blog,
-.mailing {
- width: 560px;   
-}
 
 
 .preview-blog {
+  width: 520px; 
+  padding-top: 28px;   
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;    
   background-image: url("img/bg-Strawberry.jpg");
   background-repeat: no-repeat;
-  border-radius: 14px;  
+  border-radius: 14px;
 }
+.preview-blog-head {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
 
 .preview-blog h2 {
   color: #323232; 
@@ -594,20 +725,72 @@ input[type="radio"].visually-hidden {
   font-weight: 500;  
 }
 
+.blog-link {
+  display: inline-block;
+  width: 285px;   
+}
+  
+
 .preview-blog a {
   color: #323232; 
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+   
   text-decoration: underline;
 }
 
 .mailing{
+  width: 560px;  
   color: #5a5a5a;
   border-radius: 14px;   
-  background-color: #f8f7f4;  
+  background-image: linear-gradient(-45deg,#f8f7f4 1.4%,#92cdff 1.4%, #92cdff 2.8%, #f8f7f4 2.8%, #f8f7f4 4.2%, #fe9c8e 4.2%, #fe9c8e 5.6%, #f8f7f4 5.6%, #f8f7f4 7%, #92cdff 7%, #92cdff 8.4%, #f8f7f4 8.4%, #f8f7f4 9.8%, #fe9c8e 9.8%, #fe9c8e 11.2%, #f8f7f4 11.2%, #f8f7f4 12.6%, #92cdff 12.6%, #92cdff 14%, #f8f7f4 14%, #f8f7f4 15.4%, #fe9c8e 15.4%, #fe9c8e 16.8%, #f8f7f4 16.8%, #f8f7f4 18.2%, #92cdff 18.2%, #92cdff 19.6%, #f8f7f4 19.6%, #f8f7f4 21%, #fe9c8e 21%, #fe9c8e 22.4%, #f8f7f4 22.4%, #f8f7f4 23.8%, #92cdff 23.8%, #92cdff 25.2%, #f8f7f4 25.2%, #f8f7f4 26.6%, #fe9c8e 26.6%, #fe9c8e 28%, #f8f7f4 28%,  #f8f7f4 29.4%, #92cdff 29.4%, #92cdff 30.8%, #f8f7f4 30.8%, #f8f7f4 32.2%, #fe9c8e 32.2%, #fe9c8e 33.6%, #f8f7f4 33.6%, #f8f7f4 35%, #92cdff 35%, #92cdff 36.4%, #f8f7f4 36.4%, #f8f7f4 37.8%, #fe9c8e 37.8%, #fe9c8e 39.2%, #f8f7f4 39.2%, #f8f7f4 40.6%, #92cdff 40.6%, #92cdff 42%, #f8f7f4 42%, #f8f7f4 43.4%, #fe9c8e 43.4%, #fe9c8e 44.8%, #f8f7f4 44.8%, #f8f7f4 46.2%,#92cdff 46.2%, #92cdff 47.6%, #f8f7f4 47.6%, #f8f7f4 49%, #fe9c8e 49%, #fe9c8e 50.4%, #f8f7f4 50.4%, #f8f7f4 51.8%, #92cdff 51.8%,  #92cdff 53.2%, #f8f7f4 53.2%, #f8f7f4 54.6%, #fe9c8e 54.6%, #fe9c8e 56%, #f8f7f4 56%, #f8f7f4 57.4%, #92cdff 57.4%, #92cdff 58.8%, #f8f7f4 58.8%, #f8f7f4 60.2%, #fe9c8e 60.2%, #fe9c8e 61.4%, #f8f7f4 61.4%, #f8f7f4 62.8%, #92cdff 62.8%, #92cdff 64.2%, #f8f7f4 64.2%, #f8f7f4 65.6%, #fe9c8e 65.6%, #fe9c8e 67%, #f8f7f4 67%, #f8f7f4 68.4%, #92cdff 68.4%, #92cdff 69.8%, #f8f7f4 69.8%, #f8f7f4 71.2%, #fe9c8e 71.2%, #fe9c8e 72.6%, #f8f7f4 72.6%, #f8f7f4 74%, #92cdff 74%, #92cdff 75.4%, #f8f7f4 75.4%, #f8f7f4 76.8%, #fe9c8e 76.8%, #fe9c8e 78.2%, #f8f7f4 78.2%, #f8f7f4 79.6%, #92cdff 79.6%, #92cdff 81%, #f8f7f4 81%, #f8f7f4 82.4%, #fe9c8e 82.4%, #fe9c8e 83.6%, #f8f7f4 83.6%, #f8f7f4 85%, #92cdff 85%, #92cdff 86.4%, #f8f7f4 86.4%, #f8f7f4 87.8%, #fe9c8e 87.8%, #fe9c8e 89.2%, #f8f7f4 89.2%, #f8f7f4 90.6%, #92cdff 90.6%, #92cdff 92%, #f8f7f4 92%, #f8f7f4 93.4%, #fe9c8e 93.4%, #fe9c8e 94.8%, #f8f7f4 94.8%, #f8f7f4 96.2%, #92cdff 96.2%, #92cdff 97.6%, #f8f7f4 97.6%, #f8f7f4 99%); 
+  position: relative;
 }
 
+.mailing-container {
+  position: absolute;  
+  top: 5px;
+   
+  left: 5px;
+  width: 549px;
+  height:210px;    
+  background-color: #f8f7f4;
+  border-radius: 12px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;  
+}
+
+.mailing-container p {
+  padding: 0;
+  display: inline-block;
+  width: 505px;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 32px;
+   
+    
+}
+.form-email {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 30px; 
+  padding-left: px; 
+       
+}
+input[type="email"]{
+  width: 354px; 
+  height: 42px;
+  padding-left: 14px;  
+  color: #d3d3d2;   
+  border-radius: 8px;
+  border: 1px solid #d3d3d2;  
+}
+.button-mailing{
+  margin-left: 4px;
+  padding: 13px 18px;    
+}
 .map {
   position: relative;
   min-height: 430px;
@@ -656,7 +839,7 @@ input[type="radio"].visually-hidden {
 
 
 .main-footer {
-  background-color: #849d8f;
+  background-color: rgba(255,255,255,0.2);
   font-size: 13px;     
 }
 .footer-social-list,
@@ -676,65 +859,59 @@ input[type="radio"].visually-hidden {
   background-image: url("img/ic-heart.svg");
 }
 
+
 .twiter {
   font-size:0px;  
   display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #e6ebe9;
+  width: 38px;
+  height: 38px;
   background-image: url(img/ic-tv.svg); 
   border-radius: 50%;
-  border: 3px solid rgba(194,206,199, 0.5);
- }
+}
+.twiter:hover {
+  background-image: url("img/ic-tv-hover.svg");  
+}
 
 .instagram {
   font-size:0px;  
   display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #e6ebe9;
+  width: 38px;
+  height: 38px;
   background-image: url(img/ic-inst.svg); 
   border-radius: 50%;
-  border: 3px solid rgba(194,206,199, 0.5);
- }
+}
+
+.instagram:hover {
+  background-image: url(img/ic-inst-hover.svg);  
+}
 .fb {
   font-size:0px;  
   display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #e6ebe9;
+  width: 38px;
+  height: 38px;
   background-image: url(img/ic-fb.svg); 
   border-radius: 50%;
-  border: 3px solid rgba(194,206,199, 0.5);
- }
+}
+
+.fb:hover {
+  background-image: url(img/ic-fb-hover.svg);
+}
 
 .vk {
   font-size:0px;  
   display: block;
-  width: 32px;
-  height: 32px;
-  background-color: #e6ebe9;
+  width: 38px;
+  height: 38px;
   background-image: url(img/ic-vk.svg); 
   border-radius: 50%;
-  border: 3px solid rgba(194,206,199, 0.5);
- }
-
-.twiter:hover,
-.instagram:hover,
-.fb:hover,
-.vk:hover {
-  background-color: #ffffff;
-  border-color: #dae2de;
 }
-.twiter:active,
-.instagram:active,
-.vk:active,
-.fb:active {
-  background-color: #e9e9e9;
-  border-color: #dae2de;
+
+.vk:hover {
+  background-image: url(img/ic-vk-hover.svg);  
 }
 
 .feedback-popup {
+  display: none;   
   color: #323232;  
   background-color: #f8f7f4;    
 }
