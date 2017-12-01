@@ -22,16 +22,16 @@
               <li><a href="#">Каталог</a>
               <ul class="menu-catalog-list">
                 <li class="menu-catalog-item"><a href="#">Новинки</a></li>
+                <hr class="catalog-line" noshade>
                 <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
                 <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
                 <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
+                <li class="menu-catalog-item"><a href="#">Мелорин</a></li>
                 
               </ul>
             </li>
             <li><a href="#">Доставка и оплата</a></li>
             <li><a href="#">О компании</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-        
           </ul>
         
         <ul class="user-navigation">
@@ -40,58 +40,69 @@
               <ul class="search-list">
                 <li>
                   <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
-                    <input type="search" name="поиск" placeholder="Поиск">
+                    <input type="search" name="поиск" placeholder="Что ищем?">
                   </form>    
                 </li>
              </ul>
           </li>
-          <li class="user-navigation-login"><a href="#"><span >Вход</span></a>
-            <ul class="login-list">
-              <li>
-                <form class="form-login" action="https://echo.htmlacademy.ru">
-                  <span class="visually-hidden">Электронная почта</span>
-                  <input type="email" name="email" placeholder="Электронная почта">
-                  <span class="visually-hidden">Пароль</span>
-                  <input type="password" name="password" placeholder="Пароль">
-                  <button class="button button-login" type="submit">Войти</button>    
-                </form>
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>   
-              </li>
-           </ul>
-           </li>
-           <li class="user-navigation-bascet"><a href="#">Пусто<span class="visually-hidden">Корзина</span></a>
-             <ul class="basket-list">
-                 <li><span class="visually-hidden">Таблица товаров</span>
-                 <table class="besket-item">
-                   <tr class="visually-hidden">
-                     <td>Удалить из корзины</td>
-                     <td>Изображение</td>
-                     <td>Название</td>
-                     <td>Цена/кг</td>
-                     <td>Стоимость</td>
-                   </tr>
-                   <tr>
-                     <td><button class="button-close" type="button"></button></td>
-                     <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                     <td>Пломбир с апельсиновым джемом</td>
-                     <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
-                     <td>300 руб.</td>
-                   </tr>
-                   <tr>
-                      <td><button class="button-close" type="button"></button></td>
-                     <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                     <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
-                     <td>450 руб.</td>
-                   </tr> 
-                 </table>
-                 <span><b>Итого:750 руб.</b></span>
-                 <button type="submit" class="button button-basket">Oформить заказ</button>       
-               </li>
-             </ul>
-           </li>
-        </ul>
+          
+          <li class="user-navigation-login">
+          <a href="#"><span >Вход</span></a>
+          <ul class="login-list">
+            <li>
+               <form class="form-login" action="https://echo.htmlacademy.ru">
+               <span class="visually-hidden">Электронная почта</span>
+               <input type="email" name="email" placeholder="Электронная почта">
+               <span class="visually-hidden">Пароль</span>
+               <input type="password" name="password" placeholder="Пароль">
+               
+               <div class="login-link">
+               <button class="button button-login" type="submit">Войти</button>
+               <ul class="login-link-list">
+               <li><a href="#">Забыли пароль?</a></li>
+               <li><a href="#">Новая регистрация</a></li></ul>
+               </div>
+   </form> 
+            </li>
+          </ul>
+          </li>
+     
+             
+    <li class="user-navigation-bascet"><a href="#">2 товара<span class="visually-hidden">Корзина</span></a>
+      <ul  class="basket-list">
+         <li>
+      <li><span class="visually-hidden">Таблица товаров</span>
+        <table class="besket-item">
+          <tr class="visually-hidden">
+            <td>Удалить из корзины</td>
+            <td>Изображение</td>
+            <td>Название</td>
+            <td>Цена/кг</td>
+            <td>Стоимость</td>
+          </tr>
+          <tr>
+             <td><button class="button-close" type="button"></button></td>
+             <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+             <td>Пломбир с апельсиновым джемом</td>
+             <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
+             <td>300 руб.</td>
+          </tr>
+          <tr>
+            <td><button class="button-close" type="button"></button></td>
+            <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
+            <td>450 руб.</td>
+          </tr> 
+        </table>
+        <span class="bascet-finprice"><b>Итого: 750 руб.</b></span>
+          <button type="submit" class="button button-basket">Oформить заказ</button>
+      </li>
+    </li>
+      </ul>
+    </li>
+     
+         </ul>
       </nav>
       <div class="contacts-navigation">
         <span class="contacts-navigation-timing">С 10 до 20, ежедневно</span><br>
@@ -226,7 +237,7 @@
         <div class="map">
           <img src="img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
           19/8">
-          <img class="mark" src="img/pin.svg" width="80" height="140" alt="Метка на карте">
+          <img class="mark" src="img/pin.svg" width="215" height="140" alt="Метка на карте">
          <div class="feedback">
           <p> Адрес главного офиса<br>
           И офлайн магазина:<br>
@@ -261,9 +272,11 @@
       </ul>
     </div> 
     <nav class="footer-menu">
-      <ul class="footer-menu-list">
+      <ul class="footer-menu-left">
         <li><a class="footer-menu-item" href="#">Для поставщиков</a></li>
         <li><a class="footer-menu-item" href="#">О производстве</a></li>
+      </ul>  
+      <ul class="footer-menu-right"> 
         <li><a class="footer-menu-item" href="#">Наши документы</a></li>
         <li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
       </ul> 
@@ -291,7 +304,42 @@
       </form>
         
     </div>
+    <!--
+   <div class="basket-list">
+      <li><span class="visually-hidden">Таблица товаров</span>
+        <table class="besket-item">
+          <tr class="visually-hidden">
+            <td>Удалить из корзины</td>
+            <td>Изображение</td>
+            <td>Название</td>
+            <td>Цена/кг</td>
+            <td>Стоимость</td>
+          </tr>
+          <tr>
+             <td><button class="button-close" type="button"></button></td>
+             <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+             <td>Пломбир с апельсиновым джемом</td>
+             <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
+             <td>300 руб.</td>
+          </tr>
+          <tr>
+            <td><button class="button-close" type="button"></button></td>
+            <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
+            <td>450 руб.</td>
+          </tr> 
+        </table>
+        <span class="bascet-finprice"><b>Итого: 750 руб.</b></span>
+          <button type="submit" class="button button-basket">Oформить заказ</button>
+      </li>
+    </div>
+   -->
+    
+
+    
+     </div>
    </div>
-   </div>
+    
  </body>
 </html>
