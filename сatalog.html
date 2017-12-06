@@ -66,14 +66,14 @@
                           <td>Стоимость</td>
                         </tr>
                         <tr>
-                          <td><button class="button-close" type="button"></button></td>
+                          <td><button class="bascet-button-remove" type="button"></button></td>
                           <td><img src="img/bascet-tov-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                           <td>Пломбир с апельсиновым джемом</td>
                           <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
                           <td>300 руб.</td>
                         </tr>
                         <tr>
-                          <td><button class="button-close" type="button"></button></td>
+                          <td><button class="bascet-button-remove" type="button"></button></td>
                           <td><img src="img/bascet-tov-2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                           <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                           <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
@@ -171,11 +171,11 @@
           <legend>Наполнители:</legend>
           <ul class="filter-filler-list">
             <li class="filler-filter-item">
-              <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="шоколадные" id="chocolate" checked>
+              <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox checked" name="шоколадные" id="chocolate" checked>
               <label for="chocolate">шоколадные</label>
             </li>
             <li class="filler-filter-item">
-              <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="сахарные присыпки" id="powder" checked>
+              <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox checked" name="сахарные присыпки" id="powder" checked>
               <label for="powder">сахарные присыпки</label>
             </li>
             <li class="filler-filter-item">
@@ -290,13 +290,13 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="back disabled"><a href="#"><</a></li>
-          <li class="pagination-item active"><a href="#">1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">4</a></li>
-          <li class="pagination-item"><a href="#">5</a></li>
-          <li class="next"><a href="#">></a></li>
+          <li class="back disabled"><a class="arrow-back" href="#" ><img src="img/arrow-back.svg" alt="назад" width="7px" height="12px"></a></li>
+          <li><a  class="pagination-item active" href="#">1</a></li>
+          <li><a class="pagination-item" href="#">2</a></li>
+          <li><a class="pagination-item" href="#">3</a></li>
+          <li><a class="pagination-item" href="#">4</a></li>
+          <li><a class="pagination-item" href="#">5</a></li>
+          <li><a class="arrow-next" href="#" ><img src="img/arrow-next.svg" alt="вперед" width="7" height="12"></a></li>
         </ul>
           
       </section>
@@ -322,7 +322,7 @@
             </ul> 
           </nav>
           <div class="footer-copywriting">
-            <img src="/img/logo-footer.svg" width="108" height="39" alt="html академия"> 
+            <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"> 
            <p>Cделано в <a href="#">HTML Академии</a> © 2017</p>
          </div>
        </footer>   
