@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
+    
     <input class="visually-hidden" type="radio" id="icecream-1" name="toggle" checked>
     <input class="visually-hidden" type="radio" id="icecream-2" name="toggle">
     <input class="visually-hidden" type="radio" id="icecream-3" name="toggle">   
@@ -17,37 +18,44 @@
       <div class="container">
         <header class="main-header">
           <nav class="main-navigation">
-            <div class="logo"><a href>
+            <div class="logo"><a href="/">
                 <img src="img/logo-header.svg" width="154" height="auto" alt="Логотип «Глейси»"></a>
             </div>
             
             <ul class="main-menu">
-              <li><a href="%D1%81atalog.html">Каталог</a>
+              <li><a class="menu-item" href="Сatalog.html">Каталог</a>
+               
                 <ul class="menu-catalog-list">
+                 <li>
+                 <ul class="menu-catalog-container">
                   <li class="menu-catalog-item"><a href="#">Новинки</a></li>
                   <hr class="catalog-line" noshade>
                   <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
                   <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
                   <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
                   <li class="menu-catalog-item"><a href="#">Мелорин</a></li> 
+                 </ul><li>  
                 </ul>
+                
               </li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">О компании</a></li>
+              <li><a class="menu-item" href="#">Доставка и оплата</a></li>
+              <li><a class="menu-item" href="#">О компании</a></li>
             </ul>
         
             <ul class="user-navigation">
               <li class="user-navigation-search">
                 <a><span class="visually-hidden">Поиск</span></a>
-                  <ul class="search-list">
+                 <ul class="search-list">
+                   <li><ul class="search-container">
                     <li><form class="form-search" action="https://echo.htmlacademy.ru" method="post">
                     <input type="search" name="поиск" placeholder="Что ищем?"></form></li> 
+                  </ul></li>
                   </ul>
               </li>
           
               <li class="user-navigation-login"><a href="#"><span >Вход</span></a>
                 <ul class="login-list">
-                  <li>
+                 <li><ul class="login-container"><li>
                     <form class="form-login" action="https://echo.htmlacademy.ru">
                       <span class="visually-hidden">Электронная почта</span>
                       <input type="email" name="email" placeholder="Электронная почта">
@@ -57,17 +65,19 @@
                       <div class="login-link">
                         <button class="button button-login" type="submit">Войти</button>
                         <ul class="login-link-list">
-                        <li><a href="#">Забыли пароль?</a></li>
-                        <li><a href="#">Новая регистрация</a></li></ul>
+                        <li><a class="modal-link" href="#">Забыли пароль?</a></li>
+                        <li><a class="modal-link" href="#">Новая регистрация</a></li></ul>
                       </div>
                     </form>
+                     </li> </ul>
                   </li>
-                </ul>
+                  </ul>
               </li>
               
               <li class="user-navigation-bascet"><a href="#">2 товара<span class="visually-hidden">Корзина</span></a>
                 <ul class="basket-list">
                   <li>
+                      <ul class="bascet-container"><li>
                     <div>
                       <span class="visually-hidden">Таблица товаров</span>
                       <table class="besket-item">
@@ -92,20 +102,29 @@
                           <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
                           <td>450 руб.</td>
                         </tr> 
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td colspan="2" class="bascet-finprice"><b>Итого: 750 руб.</b></td>
+                          
+                        </tr>
                       </table>
-                      <span class="bascet-finprice"><b>Итого: 750 руб.</b></span>
+                      
                       <button type="submit" class="button button-basket">Oформить заказ</button>
                     </div>
+                    
                   </li>
                 </ul>
-              </li>
+             </li></ul></li>
             </ul>
           </nav>
-          
-          <div class="contacts-navigation">
+         <div class="contacts-navigation">
+          <div class="container-contacts">     
             <span class="contacts-navigation-timing">С 10 до 20, ежедневно</span><br>
-            <a href="tel:+78124502525" class="contacts-navigation-phone">8 812 450-25-25</a>    
-          </div>      
+            <a href="tel:+78124502525" class="contacts-navigation-phone">8 812 450-25-25</a>
+          </div>         
+         </div>      
         </header>
         
         <main>
@@ -185,30 +204,35 @@
             </ul>   
           </section>
           
-          <section class="description">
-            <h2 class="desciprion-head">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-            <div class="description-column">
-              <ul class="description-left">
-                <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-                <br>
-                <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
-              </ul>
+          <div class="wafer">
+             <ul class="content">
+              <li class="head">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</li>
               
-              <ul class="description-right">
-                <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-                <br>
-                <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>  
-              </ul>
-            </div>
-          </section>
-           
+              <li class="one-block">
+                Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+               </li>
+              
+              <li class="two-block">
+                Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.  
+              </li>
+              
+              <li class="three-block">
+                Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.  
+              </li>
+              
+              <li class="four-block">
+                Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.  
+              </li>
+             </ul>
+          </div>
+          
           <section class="publications">
             <article class="preview-blog">
               <h2 class="preview-blog-head">Новое в нашем блоге</h2>
               <a href="#" class="blog-link">10 cпособов сервировки фруктовых щербетов к столу</a>    
             </article>
             
-            <div class="mailing">
+            <article class="mailing">
             <div class="mailing-container">
               <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -218,7 +242,7 @@
                 <button class="button button-mailing">Отправить</button>
               </form>
             </div>
-            </div>
+            </article>
           </section>
       
           <adress>    
@@ -251,35 +275,35 @@
               <li><a class="twiter" href="#" target="_blank" ><span class="visually hidden">Твиттер</span></a></li>
               <li><a class="instagram" href="#" target="_blank"><span class="visually hidden">Инстаграмм</span></a></li>
               <li><a class="fb" href="#" target="_blank"><span class="visually hidden">Фейсбук</span></a></li>
-              <li><a class="vk" classhref="#" target="_blank"><span class="visually hidden">Вконтакте</span></a></li>        
+              <li><a class="vk" href="#" target="_blank"><span class="visually hidden">Вконтакте</span></a></li>        
             </ul>
           </div> 
-          <nav class="footer-menu">
-            <ul class="footer-menu-left">
-              <li><a class="footer-menu-item" href="#">Для поставщиков</a></li>
-              <li><a class="footer-menu-item" href="#">О производстве</a></li>
-            </ul>  
-            <ul class="footer-menu-right"> 
-              <li><a class="footer-menu-item" href="#">Наши документы</a></li>
-              <li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
-            </ul> 
+             <nav>
+            <ul class="footer-menu">
+                <li class="footer-menu-heart"><a href="#">Для поставщиков</a></li>
+                <li><a href="#">Наши документы</a></li>
+                <li><a href="#">О производстве</a></li>
+                <li><a href="#">Экологические стандарты</a></li>
+            </ul>
           </nav>
-          <div class="footer-copywriting">
+          <div class="footer-copywriting"><a href="https://htmlacademy.ru/">
             <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"> 
-            <p>Cделано в <a href="#">HTML Академии</a> © 2017</p>
+            <p>Cделано в <a class="footer-link" href="#">HTML Академии</a> © 2017</p></a>
           </div>
         </footer>
     
-        <div class="feedback-popup">
+          <div class="feedback-container"></div>
+          
+         <div class="feedback-popup ">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <button class="feedback-button-close" type="button"></button>
           <p class="fedback-message">Мы обязательно вам ответим!</p> 
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="feedback-name">Имя</label>
-            <input type="text" name="имя" placeholder="Как вас зовут?" id="feedback-name">
+            <input type="text" name="name" placeholder="Как вас зовут?" id="feedback-name">
         
             <label class="visually-hidden" for="feedback-email">Почта</label>
-            <input type="email" name="почта" placeholder="Ваша почта для ответа" id="feedback-email">
+            <input type="email" name="email" placeholder="Ваша почта для ответа" id="feedback-email">
         
             <label class="visually-hidden" for="feedback-comment">Ваши комментарии</label>
             <textarea name="comment" id="feedback-comment" cols="30" rows="10">Напишите что-нибудь...</textarea>
@@ -287,7 +311,10 @@
             <button type="submit" class="button button-popup">Отправить</button>     
           </form>
         </div>
+     
       </div>
+      
     </div>
+  <script src="popup.js"></script>    
   </body>
 </html>
