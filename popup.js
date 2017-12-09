@@ -7,11 +7,13 @@ var login = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var comment = popup.querySelector("[name=comment]");
 
+
 link.addEventListener("click", function(evt){
    evt.preventDefault(); 
    popup.classList.add("feedback-popup-show");
    bgpopup.classList.add("feedback-container-show");
    login.focus();
+   
 });
 
 close.addEventListener("click", function(evt){
@@ -35,5 +37,39 @@ form.addEventListener("submit", function(evt) {
     if (!login.value || !email.value){
        evt.preventDefault();
        console.log("Нужно ввести имя и почту"); 
-    };
+    }
+    });
+
+window.addEventListener("keydown", function(evt){
+  if (evt.keyCode === 27){
+    if (popup.classList.contains("feedback-popup-show")){
+      popup.classList.remove("feedback-popup-show");  
+    } else{
+    if (bgpopup.classList.contains("feedback-container-show")){
+     bgpopup.classList.remove("feedback-container-show");   
+    }    
+    }
+       
+  }                   
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
