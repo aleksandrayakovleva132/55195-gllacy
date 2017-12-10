@@ -31,9 +31,11 @@ a {
 }
 
 .container {
- width: 1200px;   
+ max-width: 1200px;   
  margin-left: auto;
- margin-right: auto;  
+ margin-right: auto;
+ padding-right: 2.3%;
+ padding-left: 2.3%;   
 }
 
 a {
@@ -57,6 +59,11 @@ a:active {
   text-decoration-color: rgba(255,255,255, 0.4);
 }
 
+.breadcrumbs-list a:hover{
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  text-decoration-color: #ffbc9e;   
+}
 .breadcrumbs-list li:nth-child(2) a,
 .breadcrumbs-list li:nth-child(4) a,
 .breadcrumbs-list li:nth-child(5) a{
@@ -67,6 +74,12 @@ a:active {
   text-decoration: underline;
   text-decoration-skip: ink;
   text-decoration-color: rgba(255,255,255, 0.4);   
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  text-decoration-color: #ffbc9e;     
 }
 
 .modal-link {
@@ -191,7 +204,6 @@ input[type="radio"].visually-hidden {
 .search-list
 {
   color: black;
-  
   list-style: none;
   display: none;
 }
@@ -199,12 +211,13 @@ input[type="radio"].visually-hidden {
 
 .search-list{
   z-index: 2;
+  margin:0;
+  padding:0;  
   display: none;
   position: absolute;
   top: 53px;
-  left: 582px;  
-  margin:0;
-  padding:0;
+  left: 632px;  
+  
   background-color: transparent;
   padding-top: 5px;  
   border-radius: 8px;
@@ -305,6 +318,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
   padding: 0;
   margin: 0; 
+    
 }
 
 .menu-catalog-container {
@@ -312,23 +326,37 @@ input[type="radio"].visually-hidden {
   margin:0; 
   list-style: none;
   border-radius: 8px;   
-  background-color: #f8f7f4;
+  background-color: #f8f7f4;  
+}
+
+.menu-catalog-container li:first-child::after {
+  content: "";
+  position: absolute; 
+  top: 44px;  
+  height: 2px;
+  width: 138px;  
+  background-color: #d1d0ce;  
 }
 
 
-.menu-catalog-list:first-child {
-  border-bottom: 1px solid black;  
-}
 .menu-catalog-item:hover a{
   background-color: #fbded8;
-    
 }
+
+.menu-catalog-item:active a{
+  background-color: #f6b5a5;
+  box-shadow: none;  
+}
+
+
 .menu-catalog-item {
   padding-left: 15px;
   padding-left: 5px;  
   padding-top: 5px; 
   padding-bottom: 5px;  
 }
+
+
 .user-navigation {
   font-size: 14px;
   line-height: 16px;
@@ -445,13 +473,12 @@ input[type="radio"].visually-hidden {
   padding: 0;
   display: none;
   position: absolute;
-  display: none;
   list-style: none;  
   border-radius: 8px;
     padding-top: 5px;
   background-color: transparent;
   top: 53px;   
-  left: 746px; 
+  left: 795px; 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
 }
 .login-container {
@@ -559,7 +586,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;     
   position: absolute;
   top: 53px;
-  left: 650px;  
+  left: 700px;  
   padding-top: 5px;
   padding-right: 0px;  
   border-radius: 8px;
@@ -716,7 +743,7 @@ input[type="radio"].visually-hidden {
   width: 700px;
   padding: 0;  
   margin: 0 auto;
-  margin-bottom: 27px;
+  margin-bottom: 38px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
@@ -724,7 +751,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls{
   position: absolute;
-  bottom: 63px;
+  bottom: 10px;
   left: 27px;     
 }
 
@@ -804,7 +831,8 @@ input[type="radio"].visually-hidden {
 
 .big-banner-button{
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
+  margin-bottom: 10px;  
 }
 
 .banner-item{
@@ -815,8 +843,10 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.ice-cream-sale{
- padding: 0;   
+.ice-cream-sale {
+ padding: 0;
+ margin-left: auto;
+ margin-right: auto;   
  width: 1147px;
  display: flex;
  min-height: 230px;
@@ -885,31 +915,34 @@ input[type="radio"].visually-hidden {
   margin: 0;  
 }
 
-.catalog.index,
+
 .catalog.catalog{
-  position: relative;
+ width:    
 }
 
 .catalog-list.index{
   padding: 0;
-  margin-bottom:20px;  
-  width: 1146px; 
+  width: 1180px; 
   display:flex;
   margin-left: auto;
   margin-right: auto;  
   justify-content: space-around;
 }
-.catalog-list.catalog{
-  padding: 0;
-  margin: 0;  
-  margin-bottom:20px;  
-  width: 1146px;
-  display:flex;
-  flex-wrap: wrap;  
-  justify-content: space-between;
-  
+
+.catalog-list .index:hover{
+  color: #ffffff;  
 }
 
+
+.catalog-list.catalog{
+  padding: 0;
+  width: 1200px; 
+  display:flex;
+  flex-wrap: wrap;  
+  margin-left: auto;
+  margin-right: auto;  
+  justify-content: space-between;
+}
 .catalog-item.index {
   padding: 0;
   margin: 0;  
@@ -924,24 +957,16 @@ input[type="radio"].visually-hidden {
   padding-bottom: 65px;     
 }
 
-.catalog-item.index a:hover,
-.catalog-item.catalog a:hover{
-  background-color: rgba(255,255,255, 0.3);
-  border-radius: 12px;  
-  z-index: 2; 
-  min-height: 350px;  
-}
-
 .catalog-list.catalog{
   min-height: 1070px; 
   width: 1200px;
+     
   justify-content: space-around;
   margin: 0;
   padding: 0; 
   margin-bottom: 62px; 
+   
 }
-
-
 
 .catalog-item.index,
 .catalog-item.catalog{
@@ -953,18 +978,6 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
 }
 
-.catalog-item.catalog {
-  padding: 0;
-  margin: 0;  
-  
-  width: 267px;
-  padding-top: 6px;
-  padding-left: 13px;
-  padding-right: 13px;    
-  display: flex;
-  flex-direction: column;    
-}
-
 .catalog-item.index::before,
 .catalog-item.catalog::before{
  position: absolute;
@@ -972,7 +985,7 @@ input[type="radio"].visually-hidden {
 }
 .name-ice-cream{
   display: inline-block;  
-  width: 252px;  
+  width: 248px; 
   margin: 0;
   padding: 0; 
   margin-top: 9px;
@@ -980,7 +993,7 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  width: 248px;     
+      
 }
 
 
@@ -1009,30 +1022,48 @@ input[type="radio"].visually-hidden {
 
 .catalog-item img{
  width: 267px;
- height: 267px;  
+ height: 267px;     
  border-radius: 50%;
- margin: 0;   
+ margin: 0;
+ z-index: 1;   
+}
+
+.card-product {
+  position: relative;
+  min-height: 420px;
+  padding-left: 13px;
+  padding-right: 13px;  
+  border-radius: 14px;  
+  background-color: none;
+  margin-bottom: -70px;  
+}
+
+.card-product:hover {
+  background-color: rgba(255,255,255, 0.3);
+  z-index: 7;    
+}
+
+.button-catalog {
+  display: inline-block;  
+  z-index: 7; 
+  margin-left: 25px; 
+  display: none;   
+}
+
+.card-product:hover .button-catalog{
+  display: block;  
+}
+
+.card-product a{
+  padding: 0;
+  margin: 0;  
 }
 
 
-.button.button-catalog {
-  display: none;  
-  z-index: 2;  
-}
-
-.catalog-item.index a:hover .button-catalog,
-.catalog-item.catalog:hover .button-catalog{
-   display: block; 
-   margin-left: auto; 
-   margin-right: auto; 
-}
-
-
-.catalog-item.index a:hover,
-.catalog-item.catalog a:hover{
+.catalog-item:hover{
   color: #ffffff;    
 }
-.catalog-item.index a::before {
+.catalog-list.index > .card-product a::before {
   content: " ";
   position: absolute;  
   display: block;  
@@ -1041,6 +1072,7 @@ input[type="radio"].visually-hidden {
   background-image: url("img/ic-hit.svg");
   z-index: 3;  
 }
+
 
 .wafer{
  background-color: #fcf5e1;
@@ -1187,7 +1219,8 @@ input[type="radio"].visually-hidden {
   top: 5px;
   right: 5px;
   width: 549px;
-  height:210px;    
+  height: 180px;
+  padding-top: 30px;  
   background-color: #f8f7f4;
   border-radius: 12px; 
   display: flex;
@@ -1197,12 +1230,9 @@ input[type="radio"].visually-hidden {
 
 .mailing-container p {
   padding: 0;
+  margin-bottom: 22px;
   display: inline-block;
-  width: 505px;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-top: 32px;
-   
+  width: 505px;  
     
 }
 .form-email {
@@ -1231,7 +1261,9 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-
+.feedback {
+ font-style: normal;  
+}
 
 .adress,
 .phone {
@@ -1550,6 +1582,10 @@ input[type="radio"].visually-hidden {
   margin-right: 8px;  
   font-weight: 400;    
  }
+
+.breadcrumbs-list li:last-child{
+  font-weight: 400;
+}
 .container-filter {
   width: 874px;
   height: 204px;  

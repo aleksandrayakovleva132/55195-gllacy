@@ -19,7 +19,7 @@
         <header class="main-header">
           <nav class="main-navigation">
             <div class="logo"><a href="/">
-                <img src="img/logo-header.svg" width="154" height="auto" alt="Логотип «Глейси»"></a>
+                <img src="img/logo-header.svg" width="154" height="63" alt="Логотип «Глейси»"></a>
             </div>
             
             <ul class="main-menu">
@@ -28,8 +28,8 @@
                 <ul class="menu-catalog-list">
                  <li>
                  <ul class="menu-catalog-container">
-                  <li class="menu-catalog-item"><a href="#">Новинки</a></li>
-                  <hr class="catalog-line" noshade>
+                  <li class="menu-catalog-item item-new"><a href="#">Новинки</a></li>
+                  
                   <li class="menu-catalog-item"><a href="#">Сливочное</a></li>
                   <li class="menu-catalog-item"><a href="#">Щербеты</a></li>
                   <li class="menu-catalog-item"><a href="#">Фруктовый лед</a></li>
@@ -169,37 +169,40 @@
           <section class="catalog index">
             <h2 class="visually-hidden">Каталог</h2>
             <ul class="catalog-list index">
-              <li class="catalog-item index">
-                <a href="#">
+              <li class="card-product">
+                <a class="catalog-item index" href="#">
                   <img src="img/tov-1.jpg" width="267" height="267"  alt="Cливочое с апельсиновым джемом и цитрусовой стружкой">
                   <div class="cost-and-kg"><span class="cost ">310 ₽</span><span class="kg">/кг</span></div>
                   <p class="name-ice-cream">Cливочое с апельсиновым джемом и цитрусовой стружкой</p>
-                  <button class="button button-catalog">Быстрый просмотр</button> 
-                </a>  
+                </a>
+                 
+                  <button class="button button-catalog">Быстрый просмотр</button>   
               </li>
-              <li class="catalog-item index">
-                <a href="#">
+              <li class="card-product">
+                <a class="catalog-item index" href="#">
                   <img src="img/tov-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                   <div class="cost-and-kg"><span  class="cost">380 ₽</span><span class="kg">/кг</span></div>
                   <p class="name-ice-cream">Сливочно-кофейное с кусочками шоколада</p>
+                </a>   
                   <button class="button button-catalog ">Быстрый просмотр</button>  
-                </a>  
               </li>
-              <li class="catalog-item index">
-                <a href="#">
+              <li class="card-product">
+                <a class="catalog-item index" href="#">
                   <img src="img/tov-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                   <div class="cost-and-kg"><span class="cost">355 ₽</span><span class="kg">/кг</span></div>
                   <p class="name-ice-cream">Сливочно-клубничное с присыпкой из белого шоколада</p>
+                </a>
                   <button class="button button-catalog ">Быстрый просмотр</button>  
-                </a>  
+                  
               </li>
-              <li class="catalog-item index">
-                <a href="#">
+              <li class="card-product">
+                <a class="catalog-item index" href="#">
                   <img src="img/tov-4.jpg" width="267" height="267" alt="Cливочное крем-брюле с карамельной подливкой">
                   <div class="cost-and-kg"><span class="cost">415 ₽</span><span class="kg">/кг</span></div>
                   <p class="name-ice-cream">Cливочное крем-брюле с карамельной подливкой</p>
-                  <button class="button button-catalog">Быстрый просмотр</button>  
-                </a>  
+                </a>   
+                <button class="button button-catalog">Быстрый просмотр</button>  
+                 
               </li>
             </ul>   
           </section>
@@ -227,6 +230,7 @@
           </div>
           
           <section class="publications">
+            <h2 class="visually-hidden">Наш блог и почта</h2>
             <article class="preview-blog">
               <h2 class="preview-blog-head">Новое в нашем блоге</h2>
               <a href="#" class="blog-link">10 cпособов сервировки фруктовых щербетов к столу</a>    
@@ -244,13 +248,12 @@
             </div>
             </article>
           </section>
+         
       
-          <adress>    
-            <h2 class="visually-hidden">Как с нами связаться</h2>
+          <address>    
+            
             <div class="map">
-              
-             
-              <img src="img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
+            <img src="img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
               19/8">
               <img class="mark" src="img/pin.svg" width="215" height="140" alt="Метка на карте">
               
@@ -265,9 +268,8 @@
                 <button class="button button-feedback">Форма обратной связи</button>
               </div> 
             </div>
-          </adress>
-       
-        </main>
+         </address>
+         </main>
     
         <footer class="main-footer">
           <div class="footer-social">
@@ -286,9 +288,9 @@
                 <li><a href="#">Экологические стандарты</a></li>
             </ul>
           </nav>
-          <div class="footer-copywriting"><a href="https://htmlacademy.ru/">
+          <div class="footer-copywriting"><a href="https://htmlacademy.ru/"></a>
             <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"> 
-            <p>Cделано в <a class="footer-link" href="#">HTML Академии</a> © 2017</p></a>
+            <p>Cделано в <a class="footer-link" href="#">HTML Академии</a> © 2017</p>
           </div>
         </footer>
     
