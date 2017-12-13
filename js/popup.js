@@ -12,8 +12,7 @@ link.addEventListener("click", function(evt){
    evt.preventDefault(); 
    popup.classList.add("feedback-popup-show");
    bgpopup.classList.add("feedback-container-show");
-   login.focus();
-   
+   login.focus();  
 });
 
 close.addEventListener("click", function(evt){
