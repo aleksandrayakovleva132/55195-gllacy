@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси-каталог</title>
   <link href="/css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -31,13 +31,11 @@
               <a><span class="visually-hidden">Поиск</span></a>
               <ul class="search-list">
                 <li>
-                  <ul class="search-container">
-                    <li>
-                      <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
-                        <input type="search" name="поиск" placeholder="Что ищем?">
-                      </form>
-                    </li>
-                  </ul>
+                  <div class="search-container">
+                    <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+                      <input type="search" name="поиск" placeholder="Что ищем?">
+                    </form>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -45,77 +43,68 @@
             <li class="user-navigation-login"><a href="#"><span >Вход</span></a>
               <ul class="login-list">
                 <li>
-                  <ul class="login-container">
-                    <li>
-                      <form class="form-login" action="https://echo.htmlacademy.ru">
-                        <span class="visually-hidden">Электронная почта</span>
-                        <input type="email" name="email" placeholder="Электронная почта">
-                        <span class="visually-hidden">Пароль</span>
-                        <input type="password" name="password" placeholder="Пароль">
+                  <div class="login-container">
+                    <form class="form-login" action="https://echo.htmlacademy.ru">
+                      <span class="visually-hidden">Электронная почта</span>
+                      <input type="email" name="email" placeholder="Электронная почта">
+                      <span class="visually-hidden">Пароль</span>
+                      <input type="password" name="password" placeholder="Пароль">
 
-                        <div class="login-link">
-                          <button class="button button-login" type="submit">Войти</button>
-                          <ul class="login-link-list">
-                            <li><a class="modal-link" href="#">Забыли пароль?</a></li>
-                            <li><a class="modal-link" href="#">Новая регистрация</a></li>
-                          </ul>
-                        </div>
-                      </form>
-                    </li>
-                  </ul>
+                      <div class="login-link">
+                        <button class="button button-login" type="submit">Войти</button>
+                        <ul class="login-link-list">
+                          <li><a class="modal-link" href="#">Забыли пароль?</a></li>
+                          <li><a class="modal-link" href="#">Новая регистрация</a></li>
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
                 </li>
               </ul>
             </li>
 
             <li class="user-navigation-bascet"><a href="#">2 товара<span class="visually-hidden">Корзина</span></a>
-              <ul class="basket-list">
-                <li>
-                  <ul class="bascet-container">
-                    <li>
-                      <div>
-                        <span class="visually-hidden">Таблица товаров</span>
-                        <table class="besket-item">
-                          <tr class="visually-hidden">
-                            <td>Удалить из корзины</td>
-                            <td>Изображение</td>
-                            <td>Название</td>
-                            <td>Цена/кг</td>
-                            <td>Стоимость</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <button class="bascet-button-remove" type="button"></button>
-                            </td>
-                            <td><img src="img/bascet-tov-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                            <td>Пломбир с апельсиновым джемом</td>
-                            <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
-                            <td>300 руб.</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <button class="bascet-button-remove" type="button"></button>
-                            </td>
-                            <td><img src="img/bascet-tov-2.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                            <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                            <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
-                            <td>450 руб.</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td colspan="2" class="bascet-finprice"><b>Итого: 750 руб.</b></td>
+              <div class="basket-list">
+                <div class="bascet-container">
+                  <span class="visually-hidden">Таблица товаров</span>
+                  <table class="besket-item">
+                    <tr class="visually-hidden">
+                      <td>Удалить из корзины</td>
+                      <td>Изображение</td>
+                      <td>Название</td>
+                      <td>Цена/кг</td>
+                      <td>Стоимость</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="bascet-button-remove" type="button"></button>
+                      </td>
+                      <td><img src="img/bascet-tov-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                      <td>Пломбир с апельсиновым джемом</td>
+                      <td>1,5 кг x <span class="gray-price">200 руб.</span></td>
+                      <td>300 руб.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button class="bascet-button-remove" type="button"></button>
+                      </td>
+                      <td><img src="img/bascet-tov-2.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                      <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td>1,5 кг x <span class="gray-price">300 руб.</span></td>
+                      <td>450 руб.</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td colspan="2" class="bascet-finprice"><b>Итого: 750 руб.</b></td>
 
-                          </tr>
-                        </table>
+                    </tr>
+                  </table>
 
-                        <button type="submit" class="button button-basket">Oформить заказ</button>
-                      </div>
-
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                  <button type="submit" class="button button-basket">Oформить заказ</button>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -222,11 +211,11 @@
               </div>
 
             </div>
-            <button class="button-filter">Применить</button> 
+            <button class="button-filter">Применить</button>
           </form>
         </section>
 
-        <section class="catalog catalog">
+        <section class="catalog-container">
           <h2 class="visually-hidden">Товары</h2>
           <ul class="catalog-list catalog">
             <li class="card-product">
@@ -373,7 +362,7 @@
         </nav>
         <div class="footer-copywriting">
           <a href="https://htmlacademy.ru/">
-          <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"></a>
+            <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"></a>
           <p>Cделано в <a class="footer-link" href="#">HTML Academy</a> © 2017</p>
         </div>
       </footer>

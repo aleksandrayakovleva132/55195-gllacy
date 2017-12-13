@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -258,6 +258,7 @@
         </section>
 
         <div class="map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBagiPWUxA" width="1200" height="430"></iframe>
           <img src="img/map.png" width="1200" height="430" alt="Cанкт-Петербург,Ул. Большая Конюшенная
               19/8">
           <img class="mark" src="img/pin.svg" width="215" height="140" alt="Метка на карте">
@@ -267,7 +268,7 @@
             <span class="adress-title">Ул. Большая Конюшенная 19/8, Cанкт-Петербург</span>
             <span>Для заказов по телефону:</span>
             <span><a href="tel:+78124502525">8 812 450-25-25</a>(c 10 до 20 ежедневно)</span>
-            <button class="button button-feedback">Форма обратной связи</button>
+            <a class="button button-feedback">Форма обратной связи</a>
           </address>
         </div>
       </main>
@@ -291,16 +292,16 @@
         </nav>
         <div class="footer-copywriting">
           <a href="https://htmlacademy.ru/">
-          <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"></a>
+            <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"></a>
           <p>Cделано в <a class="footer-link" href="#">HTML Academy</a> © 2017</p>
         </div>
       </footer>
 
       <div class="feedback-container"></div>
 
-      <div class="feedback-popup ">
+      <div class="feedback-popup">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <button class="feedback-button-close" type="button"></button>
+        <button class="feedback-button-close" type="button"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
         <p class="fedback-message">Мы обязательно вам ответим!</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="feedback-name">Имя</label>
@@ -319,7 +320,7 @@
     </div>
 
   </div>
-  <script src="js/popup.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>

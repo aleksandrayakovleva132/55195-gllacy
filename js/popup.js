@@ -19,7 +19,8 @@ link.addEventListener("click", function(evt){
 close.addEventListener("click", function(evt){
     evt.preventDefault();
     popup.classList.remove("feedback-popup-show");
-    bgpopup.classList.remove("feedback-container-show")
+    bgpopup.classList.remove("feedback-container-show");
+    popup.classList.remove("modal-error");
 });
 
 bgpopup.addEventListener("click", function(evt){
@@ -36,7 +37,9 @@ form.addEventListener("submit", function(evt) {
     
     if (!login.value || !email.value){
        evt.preventDefault();
-       console.log("Нужно ввести имя и почту"); 
+       popup.classList.add("modal-error");
+    } else {
+      localStorage.setItem("login", login.value);
     }
     });
 
@@ -44,6 +47,7 @@ window.addEventListener("keydown", function(evt){
   if (evt.keyCode === 27){
     if (popup.classList.contains("feedback-popup-show")){
       popup.classList.remove("feedback-popup-show");  
+      popup.classList.remove("modal-error");  
     } else{
     if (bgpopup.classList.contains("feedback-container-show")){
      bgpopup.classList.remove("feedback-container-show");   
@@ -51,8 +55,6 @@ window.addEventListener("keydown", function(evt){
     }
        
   }                   
-
-
 
 });
 
