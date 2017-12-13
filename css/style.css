@@ -198,6 +198,10 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 30px;
 }
 
+a.button-feedback:hover {
+    color: #ffffff;
+}
+
 .main-header {
 	width: 1147px;
 	margin: auto;
@@ -1666,6 +1670,7 @@ address a {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 500;
+    animation-iteration-count:infinite; 
 }
 
 .feedback-popup input {
@@ -1733,6 +1738,7 @@ address a {
 	        animation-name: shake;
 	-webkit-animation-duration: 0.6s;
 	        animation-duration: 0.6s;
+    }
 }
 
 @-webkit-keyframes shake {
