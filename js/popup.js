@@ -57,8 +57,7 @@ window.addEventListener("keydown", function(evt){
 
 });
 
-
-
+/* 13 дек. 23:56 */
 
 
 
