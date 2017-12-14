@@ -301,6 +301,7 @@ a.button-feedback:hover {
     height: 63px;
 	padding: 0;
 	margin: 0;
+    padding-top: 8px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -839,17 +840,17 @@ a.button-feedback:hover {
 	cursor: pointer;
 }
 
-#icecream-1:checked~.site-wrapper {
+.icecream-1:checked~.site-wrapper {
 	background-color: #849d8f;
 	background-image: url("../img/icecream-banner1.png");
 }
 
-#icecream-2:checked~.site-wrapper {
+.icecream-2:checked~.site-wrapper {
 	background-color: #8996a6;
 	background-image: url("../img/icecream-banner2.png");
 }
 
-#icecream-3:checked~.site-wrapper {
+.icecream-3:checked~.site-wrapper {
 	background-color: #9d8b84;
 	background-image: url("../img/icecream-banner3.png");
 }
@@ -864,15 +865,15 @@ a.button-feedback:hover {
 	display: none;
 }
 
-#icecream-1:checked~.site-wrapper #slide-1,
-#icecream-2:checked~.site-wrapper #slide-2,
-#icecream-3:checked~.site-wrapper #slide-3 {
+.icecream-1:checked~.site-wrapper .slide-1,
+.icecream-2:checked~.site-wrapper .slide-2,
+.icecream-3:checked~.site-wrapper .slide-3 {
 	display: block;
 }
 
-#icecream-1:checked~.site-wrapper label[for="icecream-1"],
-#icecream-2:checked~.site-wrapper label[for="icecream-2"],
-#icecream-3:checked~.site-wrapper label[for="icecream-3"] {
+.icecream-1:checked~.site-wrapper label[for="icecream-1"],
+.icecream-2:checked~.site-wrapper label[for="icecream-2"],
+.icecream-3:checked~.site-wrapper label[for="icecream-3"] {
 	background-color: #ffffff;
 }
 
@@ -1606,10 +1607,13 @@ address a {
 	border-radius: 8px;
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	-webkit-animation-name: bounce;
-	        animation-name: bounce;
-	-webkit-animation-duration: 0.6s;
-	        animation-duration: 0.6s;
+}
+
+.feedback-popup-anim {
+-webkit-animation-name: bounce;
+  animation-name: bounce;
+-webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes bounce {
@@ -1873,10 +1877,12 @@ address a {
   font-size: 16px;
   font-weight: 500;  
   color: #ffffff; 
+  border:none;  
   border-radius: 20px; 
   padding-left: 16px;  
   -webkit-appearance: none;
   -moz-appearance: none;
+  
   appearance: none;
   background: url("../img/select-arrow.svg") 11px 12px;
   background-color: rgba(255, 255, 255, 0.3);    
@@ -1885,14 +1891,23 @@ address a {
   background-repeat: no-repeat;
 }
 
-.options-list:hover {
-  color: #323232;  
+select::-ms-expand {
+    display: none;
 }
+
 /* CAUTION: IE hackery ahead */
 .options::-ms-expand { 
     display: none; /* remove default arrow on ie10 and ie11 */
 }
 
+.options-list:hover {
+  color: #323232;  
+  background: url("../img/select-arrow-hover.svg") 11px 12px;
+  background-color: rgba(255, 255, 255, 0.3);    
+  background-position: 168px 13px;
+  background-size: 10px 11px; 
+  background-repeat: no-repeat; 
+} 
 
 .filter-2 {
 	width: 220px;
@@ -2004,6 +2019,7 @@ address a {
 	height: 22px;
 	position: relative;
 }
+
 
 .filter-fat label {
 	color: #e6ebe9;

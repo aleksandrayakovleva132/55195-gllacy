@@ -12,7 +12,11 @@ link.addEventListener("click", function(evt){
    evt.preventDefault(); 
    popup.classList.add("feedback-popup-show");
    bgpopup.classList.add("feedback-container-show");
-   login.focus();  
+   login.focus();
+   popup.classList.add("feedback-popup-anim");
+   setTimeout(function(){
+    popup.classList.remove("feedback-popup-anim");
+  }, 700);
 });
 
 close.addEventListener("click", function(evt){
@@ -37,6 +41,9 @@ form.addEventListener("submit", function(evt) {
     if (!login.value || !email.value){
        evt.preventDefault();
        popup.classList.add("modal-error");
+       setTimeout(function(){
+         popup.classList.remove("modal-error");
+       }, 600);
     } else {
       localStorage.setItem("login", login.value);
     }
