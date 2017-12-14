@@ -64,7 +64,6 @@ window.addEventListener("keydown", function(evt){
 
 });
 
-/* 14 дек. 10:38 */
 
 
 
