@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси-каталог</title>
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -28,16 +28,14 @@
 
           <ul class="user-navigation">
             <li class="user-navigation-search">
-              <a><span class="visually-hidden">Поиск</span></a>
-              <ul class="search-list">
-                <li>
-                  <div class="search-container">
-                    <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
-                      <input type="search" name="поиск" placeholder="Что ищем?">
-                    </form>
-                  </div>
-                </li>
-              </ul>
+              <span class="visually-hidden">Поиск</span>
+              <div class="search-list">
+                <div class="search-container">
+                  <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="поиск" placeholder="Что ищем?">
+                  </form>
+                </div>
+              </div>
             </li>
 
             <li class="user-navigation-login"><a href="#"><span >Вход</span></a>
@@ -108,7 +106,7 @@
             </li>
           </ul>
         </nav>
-    
+
         <div class="contacts-navigation">
           <div class="breadcrumbs">
             <ul class="breadcrumbs-list">
@@ -136,7 +134,6 @@
           <form class="form-filter" action="https://echo.htmlacademy.ru">
             <div class="filter-1">
               <span>Сортировка:</span>
-              <div class="options"></div>
               <select class="options-list" name="sorting">
                 <option value="popular">по популярности</option>
                 <option value="popular">cначала недорогие</option>
@@ -361,7 +358,7 @@
           </ul>
         </nav>
         <div class="footer-copywriting">
-          <a href="https://htmlacademy.ru/">
+          <a href="<a href="https://htmlacademy.ru/intensive/htmlcss">">
             <img src="img/logo-footer.svg" width="108" height="39" alt="html академия"></a>
           <p>Cделано в <a class="footer-link" href="#">HTML Academy</a> © 2017</p>
         </div>
@@ -370,5 +367,6 @@
     </div>
   </div>
 </body>
-<!-- 14 дек. 10:38 -->
+<!-- 14 дек. 22:38 -->
+
 </html>
