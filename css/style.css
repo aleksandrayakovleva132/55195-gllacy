@@ -265,19 +265,20 @@ a.button-feedback:hover {
 }
 
 .form-search {
-    box-sizing: border-box;
-    width: 342px;
-    background-color: #f8f7f4;
-    border-radius: 8px;  
+	box-sizing: border-box;
+	width: 342px;
+	background-color: #f8f7f4;
+	border-radius: 8px;
 }
- input[type="search"] {
+
+input[type="search"] {
 	padding: 0;
 	margin: 0;
 	padding-left: 14px;
-    width: 306px; 
-	height: 42px; 
-    margin: 20px;
-    border: 1px solid #d3d3d2;
+	width: 306px;
+	height: 42px;
+	margin: 20px;
+	border: 1px solid #d3d3d2;
 	border-radius: 8px;
 }
 
@@ -344,7 +345,7 @@ a.button-feedback:hover {
 
 .main-menu li:first-child:hover .menu-catalog-list,
 .main-menu li:first-child:active .menu-catalog-list {
-    position: absolute;
+	position: absolute;
 	top: 55px;
 	padding-top: 5px;
 	display: block;
@@ -821,7 +822,7 @@ a.button-feedback:hover {
 
 .slider-controls label {
 	display: inline-block;
-    vertical-align: middle;
+	vertical-align: middle;
 	width: 17px;
 	height: 17px;
 	margin-right: 8px;
@@ -1401,7 +1402,7 @@ iframe {
 
 .adress {
 	display: inline-block;
-    vertical-align: middle;
+	vertical-align: middle;
 	margin-bottom: 21px;
 }
 
@@ -1847,7 +1848,7 @@ address a {
 	padding: 0;
 	font-size: 35px;
 	display: inline-block;
-    vertical-align: middle;
+	vertical-align: middle;
 	margin-top: 11px;
 	margin-bottom: 36px;
 }
@@ -1914,7 +1915,8 @@ select::-ms-expand {
 /* CAUTION: IE hackery ahead */
 .options::-ms-expand {
 	display: none;
- /* remove default arrow on ie10 and ie11 */;
+ /* remove default arrow on ie10 and ie11 */
+	;
 }
 
 .options-list:hover {
