@@ -251,7 +251,6 @@ a.button-feedback:hover {
 
 .search-list {
 	z-index: 2;
-	display: none;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -260,26 +259,26 @@ a.button-feedback:hover {
 	border-radius: 8px;
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	border-radius: 8px;
 	position: absolute;
 	top: 33px;
 	left: -310px;
 }
 
-.search-container {
-	padding: 20px 15px;
-	background-color: #f8f7f4;
-	border-radius: 8px;
+.form-search {
+    box-sizing: border-box;
+    width: 342px;
+    background-color: #f8f7f4;
+    border-radius: 8px;  
 }
-
-.form-search input[type="search"] {
+ input[type="search"] {
 	padding: 0;
 	margin: 0;
-	width: 310px;
-	height: 42px;
 	padding-left: 14px;
-	border: 1px solid #d3d3d2;
-	border-radius: 6px;
+    width: 306px; 
+	height: 42px; 
+    margin: 20px;
+    border: 1px solid #d3d3d2;
+	border-radius: 8px;
 }
 
 .user-navigation-search:hover .search-list {
@@ -345,7 +344,7 @@ a.button-feedback:hover {
 
 .main-menu li:first-child:hover .menu-catalog-list,
 .main-menu li:first-child:active .menu-catalog-list {
-	position: fixed;
+    position: absolute;
 	top: 55px;
 	padding-top: 5px;
 	display: block;
@@ -822,6 +821,7 @@ a.button-feedback:hover {
 
 .slider-controls label {
 	display: inline-block;
+    vertical-align: middle;
 	width: 17px;
 	height: 17px;
 	margin-right: 8px;
@@ -1401,6 +1401,7 @@ iframe {
 
 .adress {
 	display: inline-block;
+    vertical-align: middle;
 	margin-bottom: 21px;
 }
 
@@ -1846,6 +1847,7 @@ address a {
 	padding: 0;
 	font-size: 35px;
 	display: inline-block;
+    vertical-align: middle;
 	margin-top: 11px;
 	margin-bottom: 36px;
 }
